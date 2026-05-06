@@ -40,11 +40,14 @@ METRIC_PATTERNS = [
     ("收入总计", "income_total"),
     ("使用非财政拨款结余", "non_fiscal_surplus_used"),
     ("上年结转", "carryover_from_previous_year"),
+    ("结转下年", "carryover_to_next_year"),
     ("本年支出合计", "current_year_expense_total"),
     ("支出总计", "expense_total"),
     ("教育支出", "education_expense"),
     ("科学技术支出", "science_technology_expense"),
     ("社会保障和就业支出", "social_security_employment_expense"),
+    ("节能环保支出", "energy_conservation_environmental_protection_expense"),
+    ("资源勘探工业信息等支出", "resource_exploration_industry_information_expense"),
     ("住房保障支出", "housing_security_expense"),
 ]
 

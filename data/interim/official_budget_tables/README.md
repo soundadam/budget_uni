@@ -47,3 +47,22 @@ python budget_uni/scripts/official_tables_to_fact.py \
 - `本年收入合计`、`收入总计`、`财政拨款收入` 是不同口径，不能互相替代。
 - 该样本说明工信部直属高校官方 PDF 可以进入全高校经费事实表，但不能进入旧的“教育部直属高校预算主表”。
 - 当前 `*_facts.csv` 是机器转换候选，进入 `processed/` 前仍需人工确认表名和指标映射。
+
+## 批量输出文件
+
+运行：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/process_all_official_pdfs.py
+```
+
+会生成：
+
+| 文件 | 粒度 | 用途 |
+| --- | --- | --- |
+| `official_pdf_processing_inventory.csv` | 一个 PDF 一行 | 记录来源、PDF、本地路径、文本/表/字段输出路径和抽取行数。 |
+| `official_finance_fact_candidates.csv` | 一个 PDF-指标 一行 | 汇总全部 PDF 的长表事实候选。 |
+| `official_pdf_field_catalog.csv` | 一个 PDF-字段 一行 | 更轻的字段目录，用于检查已经抽到哪些口径。 |
+
+这些 CSV 仍属于 interim，默认不进入 git。后续应从 `official_finance_fact_candidates.csv` 人工复核后，再生成 `processed/university_finance_fact.csv` 或相应分析快照表。

@@ -55,3 +55,16 @@ python budget_uni/scripts/official_tables_to_fact.py \
 ```
 
 输出 `data/interim/official_budget_tables/{prefix}_facts.csv`。该文件仍是中间产物，进入 `processed/` 前必须复核表名、指标名和预算/决算口径。
+
+批量处理当前登记/下载的所有官方 PDF：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/process_all_official_pdfs.py
+```
+
+批量输出：
+
+- `data/interim/official_budget_tables/official_pdf_processing_inventory.csv`
+- `data/interim/official_budget_tables/official_finance_fact_candidates.csv`
+- `data/interim/official_budget_tables/official_pdf_field_catalog.csv`
