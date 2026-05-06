@@ -14,8 +14,10 @@ from official_pdf_extract import (
     DEFAULT_OUT_DIR,
     DEFAULT_SOURCE_CSV,
     DEFAULT_TABLES_DIR,
+    KEYWORDS,
     build_metadata,
     extract_pdf,
+    number_candidates,
     write_line_candidates,
     write_table_candidates,
 )
@@ -62,6 +64,36 @@ FIELD_CATALOG_FIELDS = [
     "notes",
 ]
 
+LINE_METRIC_PATTERNS = [
+    ("budget_total", "收支总预算", r"收支总预算\s*([0-9,]+(?:\.\d+)?)\s*万元"),
+    ("current_year_income_total", "本年收入合计", r"本年收入合计\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("current_year_income_total", "本年收入", r"本年收入\s*([0-9,]+(?:\.\d+)?)\s*万元"),
+    ("non_fiscal_surplus_used", "使用非财政拨款结余", r"使用非财政[拨拔]款结余\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("carryover_from_previous_year", "上年结转", r"上年结转\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("current_year_expense_total", "本年支出合计", r"本年支出合计\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("current_year_expense_total", "本年支出", r"本年支出(?:预算)?\s*([0-9,]+(?:\.\d+)?)\s*万元"),
+    ("carryover_to_next_year", "结转下年", r"结转下年\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("income_total", "收入总计", r"收入总计\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("expense_total", "支出总计", r"支出总计\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    (
+        "general_public_budget_appropriation_income",
+        "一般公共预算拨款收入",
+        r"一般公共预算[拨拔]款收入\s*([0-9,]+(?:\.\d+)?)(?:万元)?",
+    ),
+    (
+        "government_fund_budget_appropriation_income",
+        "政府性基金预算拨款收入",
+        r"政府性基金预算[拨拔]款收入\s*([0-9,]+(?:\.\d+)?)(?:万元)?",
+    ),
+    ("undertaking_income", "事业收入", r"事业收入\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    ("other_income", "其他收入", r"其他收入\s*([0-9,]+(?:\.\d+)?)(?:万元)?"),
+    (
+        "current_year_fiscal_appropriation_expense",
+        "本年财政拨款支出",
+        r"本年财政拨款支出\s*([0-9,]+(?:\.\d+)?)\s*万元",
+    ),
+]
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Process all local official PDFs registered in official_sources.csv.")
@@ -70,6 +102,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--text-dir", type=Path, default=DEFAULT_OUT_DIR)
     parser.add_argument("--tables-dir", type=Path, default=DEFAULT_TABLES_DIR)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
+    parser.add_argument("--ocr-empty-pdfs", action="store_true", help="Run PaddleOCR when PyMuPDF finds no text/tables.")
     return parser.parse_args()
 
 
@@ -104,7 +137,19 @@ def basename_from_url(url: str) -> str:
     return Path(path).name
 
 
+def local_filename_from_notes(notes: str) -> str:
+    match = re.search(r"本地文件\s*([A-Za-z0-9_.-]+\.pdf)", notes or "")
+    return match.group(1) if match else ""
+
+
 def find_local_pdf(row: dict[str, str], pdfs: list[Path], used: set[Path]) -> Path | None:
+    noted_filename = local_filename_from_notes(row.get("notes", ""))
+    if noted_filename:
+        for pdf in pdfs:
+            if pdf.name == noted_filename:
+                used.add(pdf)
+                return pdf
+
     url_basename = basename_from_url(row.get("url", ""))
     for pdf in pdfs:
         if pdf.name == url_basename:
@@ -149,11 +194,110 @@ def row_to_namespace(row: dict[str, str], pdf: Path, source_csv: Path) -> Simple
     )
 
 
+def amount_text_to_yi_yuan(value: str) -> str:
+    amount = float(value.replace(",", ""))
+    return f"{amount / 10000:.6f}"
+
+
+def compact_pdf_text(text: str) -> str:
+    compact = re.sub(r"=====page\d+=====", "", text.replace(" ", ""))
+    return re.sub(r"\s+", "", compact)
+
+
+def has_meaningful_text(text: str) -> bool:
+    return bool(compact_pdf_text(text))
+
+
+def line_facts_from_text(meta: dict[str, str], pdf: Path, text: str) -> list[dict[str, str]]:
+    compact = compact_pdf_text(text)
+    best_rows: dict[str, dict[str, str]] = {}
+    for metric_code, metric_name, pattern in LINE_METRIC_PATTERNS:
+        for match in re.finditer(pattern, compact):
+            amount_original = match.group(1)
+            amount_yi_yuan = amount_text_to_yi_yuan(amount_original)
+            if metric_code in best_rows and float(best_rows[metric_code]["amount_yi_yuan"]) >= float(amount_yi_yuan):
+                continue
+            best_rows[metric_code] = {
+                "institution_name": meta.get("university", ""),
+                "year": meta.get("year", ""),
+                "fiscal_stage": "budget" if meta.get("document_type") == "budget" else "",
+                "document_type": meta.get("document_type", ""),
+                "table_name": "text_budget_explanation",
+                "metric_code": metric_code,
+                "metric_name": metric_name,
+                "amount_original": amount_original,
+                "unit_original": "万元",
+                "amount_yi_yuan": amount_yi_yuan,
+                "source_pdf": str(pdf),
+                "source_url": meta.get("source_url", ""),
+                "extraction_method": "pymupdf_text_regex_candidate",
+                "verified": "False",
+                "notes": "auto-converted from official PDF text; keeps largest value per metric_code; requires manual review",
+            }
+    return list(best_rows.values())
+
+
+def line_candidates_from_text(text: str) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    page = 0
+    line_no = 0
+    for raw_line in text.splitlines():
+        if raw_line.startswith("===== page "):
+            page_match = re.search(r"page\s+(\d+)", raw_line)
+            page = int(page_match.group(1)) if page_match else page + 1
+            line_no = 0
+            continue
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+        line_no += 1
+        if any(keyword in line for keyword in KEYWORDS) or number_candidates(line):
+            rows.append(
+                {
+                    "page": str(page),
+                    "line_no": str(line_no),
+                    "unit_hint": "万元" if "万元" in line else "",
+                    "raw_text": line,
+                    "number_candidates": number_candidates(line),
+                    "keyword_hits": "|".join(k for k in KEYWORDS if k in line),
+                }
+            )
+    return rows
+
+
+def ocr_pdf_text(pdf: Path) -> str:
+    try:
+        import fitz
+        from paddleocr import PaddleOCR
+    except ImportError as exc:
+        raise SystemExit("OCR fallback needs PyMuPDF and PaddleOCR in the dev environment.") from exc
+
+    ocr = PaddleOCR(lang="ch", show_log=False)
+    pages: list[str] = []
+    with fitz.open(pdf) as doc:
+        for page_index, page in enumerate(doc, start=1):
+            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+            image_path = DEFAULT_OUT_DIR / "_ocr_tmp_page.png"
+            pix.save(image_path)
+            result = ocr.ocr(str(image_path), cls=True)
+            texts: list[str] = []
+            for block in result or []:
+                for item in block or []:
+                    if len(item) >= 2:
+                        texts.append(str(item[1][0]))
+            pages.append(f"\n\n===== page {page_index} =====\n" + "\n".join(texts))
+            image_path.unlink(missing_ok=True)
+    return "".join(pages).lstrip()
+
+
 def process_one(row: dict[str, str], pdf: Path, args: argparse.Namespace) -> dict[str, str]:
     pdf_id = pdf_id_from_row(row, pdf)
     meta_args = row_to_namespace(row, pdf, args.source_csv)
     meta = build_metadata(meta_args, pdf)
     table_rows, line_candidates, text = extract_pdf(pdf)
+    if args.ocr_empty_pdfs and not table_rows and not line_candidates and not has_meaningful_text(text):
+        text = ocr_pdf_text(pdf)
+        line_candidates = line_candidates_from_text(text)
 
     text_path = args.text_dir / f"{pdf_id}.txt"
     tables_path = args.tables_dir / f"{pdf_id}_tables.csv"
@@ -165,6 +309,8 @@ def process_one(row: dict[str, str], pdf: Path, args: argparse.Namespace) -> dic
     write_line_candidates(lines_path, line_candidates, meta)
 
     fact_rows = convert(tables_path)
+    if not fact_rows:
+        fact_rows = line_facts_from_text(meta, pdf, text)
     with facts_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=OUTPUT_FIELDS)
         writer.writeheader()

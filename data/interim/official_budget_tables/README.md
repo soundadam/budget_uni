@@ -66,3 +66,34 @@ python budget_uni/scripts/process_all_official_pdfs.py
 | `official_pdf_field_catalog.csv` | 一个 PDF-字段 一行 | 更轻的字段目录，用于检查已经抽到哪些口径。 |
 
 这些 CSV 仍属于 interim，默认不进入 git。后续应从 `official_finance_fact_candidates.csv` 人工复核后，再生成 `processed/university_finance_fact.csv` 或相应分析快照表。
+
+## 当前批量处理状态
+
+最近一次运行：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/process_all_official_pdfs.py --ocr-empty-pdfs
+```
+
+已处理 7 个 2026 年官方预算 PDF：
+
+| 学校 | PDF 状态 | 抽取方式 | 字段候选数 | 备注 |
+| --- | --- | --- | ---: | --- |
+| 清华大学 | 已下载 | PyMuPDF 表格候选 | 28 | 需人工复核重复表格行。 |
+| 北京大学 | 已下载 | PaddleOCR + 正文正则 | 11 | 原 PDF 为扫描/图片层，无文本层。 |
+| 浙江大学 | 已下载 | PyMuPDF 正文正则 | 11 | 有文本层但无可识别表格线。 |
+| 上海交通大学 | 已下载 | PyMuPDF 表格候选 | 22 | 需人工复核重复表格行。 |
+| 复旦大学 | 已下载 | PyMuPDF 表格候选 | 35 | 需人工复核重复表格行。 |
+| 南京大学 | 已下载 | PyMuPDF 表格候选 | 38 | 需人工复核重复表格行。 |
+| 北京理工大学 | 已下载 | PyMuPDF 表格候选 | 16 | 工信部直属高校样本。 |
+
+总计：
+
+| 输出 | 数量 |
+| --- | ---: |
+| PDF | 7 |
+| 长表事实候选行 | 161 |
+| 已覆盖学校 | 7 |
+
+当前核心字段已经覆盖 `收入总计`、`本年收入合计`、`财政拨款/一般公共预算拨款收入`、`事业收入`、`其他收入`、`上年结转`、`使用非财政拨款结余`、`本年支出合计`、`支出总计` 等。但这些仍是机器候选，进入 processed 前必须核对 PDF 原表。

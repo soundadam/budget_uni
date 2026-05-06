@@ -60,7 +60,7 @@ python budget_uni/scripts/official_tables_to_fact.py \
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/process_all_official_pdfs.py
+python budget_uni/scripts/process_all_official_pdfs.py --ocr-empty-pdfs
 ```
 
 批量输出：
