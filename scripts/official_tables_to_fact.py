@@ -103,6 +103,8 @@ def iter_metric_pairs(row: dict[str, str]) -> list[tuple[str, str]]:
         amount = clean_text(row.get(keys[idx + 1]))
         if not metric or not amount:
             continue
+        if parse_amount(metric) is not None:
+            continue
         if parse_amount(amount) is None:
             continue
         pairs.append((metric, amount))
