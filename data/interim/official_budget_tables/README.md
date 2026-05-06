@@ -50,6 +50,28 @@ python budget_uni/scripts/official_tables_to_fact.py \
 
 ## 批量输出文件
 
+批量处理前，可先从官方索引页发现并下载多年 PDF：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/discover_download_official_pdfs.py
+python budget_uni/scripts/process_all_official_pdfs.py
+python budget_uni/scripts/normalize_official_source_metadata.py
+python budget_uni/scripts/process_all_official_pdfs.py
+```
+
+第一个脚本会把新发现的 PDF URL 追加回 `data/raw/official_sources.csv`，并把 PDF 下载到
+`data/raw/official/pdfs/`。下载报告位于：
+
+```text
+data/interim/source_discovery/official_pdf_download_report.csv
+```
+
+第一次 `process_all_official_pdfs.py` 负责生成可供判别的 PDF 文本。`normalize_official_source_metadata.py` 会用已抽出的 PDF 文本修正 `finance_document`、`unknown_year` 和预算/决算误判，并把明显非经费 PDF 从来源表移出。最后再跑一次批处理，让 inventory 和事实候选表反映规范化后的来源表。
+
+如果网络权限不可用，报告中会出现 `fetch_failed` 和 `Operation not permitted`，这表示本机沙箱阻止联网，
+不是官方来源表或抽取脚本本身失败。
+
 运行：
 
 ```bash
@@ -73,27 +95,35 @@ python budget_uni/scripts/process_all_official_pdfs.py
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/process_all_official_pdfs.py --ocr-empty-pdfs
+python budget_uni/scripts/discover_download_official_pdfs.py --sleep 0.2
+python budget_uni/scripts/normalize_official_source_metadata.py
+python budget_uni/scripts/process_all_official_pdfs.py --reuse-existing-outputs
 ```
 
-已处理 7 个 2026 年官方预算 PDF：
+已处理 144 个官方财务 PDF，覆盖预算和部分决算：
 
-| 学校 | PDF 状态 | 抽取方式 | 字段候选数 | 备注 |
-| --- | --- | --- | ---: | --- |
-| 清华大学 | 已下载 | PyMuPDF 表格候选 | 28 | 需人工复核重复表格行。 |
-| 北京大学 | 已下载 | PaddleOCR + 正文正则 | 11 | 原 PDF 为扫描/图片层，无文本层。 |
-| 浙江大学 | 已下载 | PyMuPDF 正文正则 | 11 | 有文本层但无可识别表格线。 |
-| 上海交通大学 | 已下载 | PyMuPDF 表格候选 | 22 | 需人工复核重复表格行。 |
-| 复旦大学 | 已下载 | PyMuPDF 表格候选 | 35 | 需人工复核重复表格行。 |
-| 南京大学 | 已下载 | PyMuPDF 表格候选 | 38 | 需人工复核重复表格行。 |
-| 北京理工大学 | 已下载 | PyMuPDF 表格候选 | 16 | 工信部直属高校样本。 |
+| 机构 | 口径 | PDF | 长表事实候选行 |
+| --- | --- | ---: | ---: |
+| 清华大学 | 预算 | 14 | 722 |
+| 北京大学 | 预算/决算 | 13 | 262 |
+| 浙江大学 | 预算/决算 | 19 | 259 |
+| 上海交通大学 | 预算 | 1 | 22 |
+| 复旦大学 | 预算/决算 | 36 | 731 |
+| 南京大学 | 预算 | 1 | 38 |
+| 中国科学技术大学 | 预算 | 10 | 232 |
+| 哈尔滨工业大学 | 预算 | 6 | 93 |
+| 北京理工大学 | 预算/决算 | 12 | 185 |
+| 北京科技大学 | 预算/决算 | 5 | 121 |
+| 教育部 | 预算/决算 | 11 | 355 |
+| 中国科学院 | 预算/决算 | 15 | 1019 |
+| 中国科学院上海药物研究所 | 预算 | 1 | 56 |
 
 总计：
 
 | 输出 | 数量 |
 | --- | ---: |
-| PDF | 7 |
-| 长表事实候选行 | 161 |
-| 已覆盖学校 | 7 |
+| PDF | 144 |
+| 长表事实候选行 | 4095 |
+| 暂无字段候选的 PDF | 7 |
 
 当前核心字段已经覆盖 `收入总计`、`本年收入合计`、`财政拨款/一般公共预算拨款收入`、`事业收入`、`其他收入`、`上年结转`、`使用非财政拨款结余`、`本年支出合计`、`支出总计` 等。但这些仍是机器候选，进入 processed 前必须核对 PDF 原表。

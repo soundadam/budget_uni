@@ -103,6 +103,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--tables-dir", type=Path, default=DEFAULT_TABLES_DIR)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
     parser.add_argument("--ocr-empty-pdfs", action="store_true", help="Run PaddleOCR when PyMuPDF finds no text/tables.")
+    parser.add_argument(
+        "--include-unregistered-pdfs",
+        action="store_true",
+        help="Also process local PDFs that are not registered as official finance PDFs in the source CSV.",
+    )
+    parser.add_argument(
+        "--reuse-existing-outputs",
+        action="store_true",
+        help="Reuse existing per-PDF text/table/fact CSVs when a non-empty facts file already exists.",
+    )
     return parser.parse_args()
 
 
@@ -112,7 +122,21 @@ def read_sources(path: Path) -> list[dict[str, str]]:
 
 
 def pdf_url_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
-    return [row for row in rows if row.get("url", "").lower().split("?")[0].endswith(".pdf")]
+    finance_doc_types = {
+        "budget",
+        "final_account",
+        "ministry_budget",
+        "ministry_final_account",
+        "institute_budget",
+        "institute_final_account",
+    }
+    return [
+        row
+        for row in rows
+        if row.get("source_level") == "official_pdf"
+        and row.get("document_type") in finance_doc_types
+        and row.get("url", "").lower().split("?")[0].endswith(".pdf")
+    ]
 
 
 def safe_part(value: str) -> str:
@@ -265,6 +289,13 @@ def line_candidates_from_text(text: str) -> list[dict[str, str]]:
     return rows
 
 
+def csv_data_rows(path: Path) -> int:
+    if not path.exists():
+        return 0
+    with path.open(newline="", encoding="utf-8") as f:
+        return max(sum(1 for _ in f) - 1, 0)
+
+
 def ocr_pdf_text(pdf: Path) -> str:
     try:
         import fitz
@@ -294,15 +325,39 @@ def process_one(row: dict[str, str], pdf: Path, args: argparse.Namespace) -> dic
     pdf_id = pdf_id_from_row(row, pdf)
     meta_args = row_to_namespace(row, pdf, args.source_csv)
     meta = build_metadata(meta_args, pdf)
-    table_rows, line_candidates, text = extract_pdf(pdf)
-    if args.ocr_empty_pdfs and not table_rows and not line_candidates and not has_meaningful_text(text):
-        text = ocr_pdf_text(pdf)
-        line_candidates = line_candidates_from_text(text)
 
     text_path = args.text_dir / f"{pdf_id}.txt"
     tables_path = args.tables_dir / f"{pdf_id}_tables.csv"
     lines_path = args.tables_dir / f"{pdf_id}_line_candidates.csv"
     facts_path = args.tables_dir / f"{pdf_id}_facts.csv"
+
+    existing_fact_rows = csv_data_rows(facts_path)
+    if args.reuse_existing_outputs and existing_fact_rows:
+        return {
+            "pdf_id": pdf_id,
+            "institution_name": meta.get("university", ""),
+            "year": meta.get("year", ""),
+            "document_type": meta.get("document_type", ""),
+            "title": meta.get("title", ""),
+            "source_url": meta.get("source_url", ""),
+            "source_site": meta.get("source_site", ""),
+            "source_level": meta.get("source_level", ""),
+            "local_pdf": str(pdf),
+            "text_path": str(text_path),
+            "tables_path": str(tables_path),
+            "lines_path": str(lines_path),
+            "facts_path": str(facts_path),
+            "table_rows": str(csv_data_rows(tables_path)),
+            "line_candidate_rows": str(csv_data_rows(lines_path)),
+            "fact_rows": str(existing_fact_rows),
+            "status": "reused_existing_outputs",
+            "notes": "reused existing per-PDF outputs; facts still require manual metric/table review",
+        }
+
+    table_rows, line_candidates, text = extract_pdf(pdf)
+    if args.ocr_empty_pdfs and not table_rows and not line_candidates and not has_meaningful_text(text):
+        text = ocr_pdf_text(pdf)
+        line_candidates = line_candidates_from_text(text)
 
     text_path.write_text(text, encoding="utf-8")
     write_table_candidates(tables_path, table_rows, meta)
@@ -420,19 +475,20 @@ def main() -> None:
             continue
         inventory_rows.append(process_one(row, pdf, args))
 
-    for pdf in pdfs:
-        if pdf in used:
-            continue
-        row = {
-            "university": "",
-            "year": "",
-            "document_type": "",
-            "title": "",
-            "url": "",
-            "source_site": "",
-            "source_level": "local_pdf_unregistered",
-        }
-        inventory_rows.append(process_one(row, pdf, args))
+    if args.include_unregistered_pdfs:
+        for pdf in pdfs:
+            if pdf in used:
+                continue
+            row = {
+                "university": "",
+                "year": "",
+                "document_type": "",
+                "title": "",
+                "url": "",
+                "source_site": "",
+                "source_level": "local_pdf_unregistered",
+            }
+            inventory_rows.append(process_one(row, pdf, args))
 
     fact_paths = [Path(row["facts_path"]) for row in inventory_rows if row.get("facts_path")]
     inventory_path = args.report_dir / "official_pdf_processing_inventory.csv"
