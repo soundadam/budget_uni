@@ -1,0 +1,15 @@
+year,北京大学,清华大学,浙江大学,上海交通大学,复旦大学,南京大学,中国科学技术大学,哈尔滨工业大学,西安交通大学
+2013,,income_total,,,income_total,income_total,,,
+2014,,income_total,income_total,,,budget_total,,,income_total
+2015,,income_total,income_total,,income_total,expense_total,,,income_total
+2016,income_total,income_total,income_total,budget_total,,budget_total,,,income_total
+2017,income_total,income_total,income_total,income_total,income_total,budget_total,income_total,,income_total
+2018,income_total,income_total,income_total,income_total,income_total,budget_total,income_total,,income_total
+2019,income_total,income_total,income_total,income_total,income_total,income_total,income_total,,income_total
+2020,income_total,income_total,budget_total,income_total,income_total,budget_total,income_total,,income_total
+2021,,income_total,budget_total,income_total,income_total,income_total,income_total,income_total,
+2022,expense_total,income_total,budget_total,income_total,income_total,income_total,income_total,income_total,income_total
+2023,expense_total,income_total,budget_total,income_total,income_total,income_total,income_total,income_total,income_total
+2024,expense_total,income_total,budget_total,income_total,income_total,income_total,income_total,income_total,income_total
+2025,income_total,income_total,budget_total,income_total,income_total,income_total,income_total,income_total,income_total
+2026,income_total,income_total,budget_total,income_total,expense_total,income_total,income_total,income_total,income_total

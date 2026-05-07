@@ -102,6 +102,58 @@ data/processed/c9_budget_cagr_official_preferred.csv
 | `cagr_percent` | float | 复合年均增长率百分数 |
 | `source_coverage_notes` | string | 起止区间内来源类型计数 |
 
+## 官方财务事实派生宽表
+
+官方 PDF/HTML 抽取候选进一步派生为宽表：
+
+```text
+data/processed/university_finance_fact_derived.csv
+data/processed/c9_official_finance_fact_derived.csv
+data/processed/c9_official_finance_metric_coverage.csv
+```
+
+`university_finance_fact_derived.csv` 的粒度是 `institution_name + year + document_type`。该表用于区分“收支总预算/收入总计/支出总计”和“本年收入/本年支出”等不同口径；缺失指标保持为空，不用其他口径硬填。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `institution_name` | string | 高校或机构名称 |
+| `year` | int | 资料年份 |
+| `document_type` | string | `budget`、`final_account` 等 |
+| `comparison_budget_total` | float/null | 用于年度总规模比较的总预算口径，按 `budget_total > income_total > expense_total` 选取 |
+| `comparison_metric_code` | string/null | `comparison_budget_total` 实际采用的指标代码 |
+| `budget_total` | float/null | 收支总预算或部门收支总预算 |
+| `income_total` | float/null | 收入总计 |
+| `expense_total` | float/null | 支出总计 |
+| `current_year_income_total` | float/null | 本年收入合计或本年收入 |
+| `current_year_expense_total` | float/null | 本年支出合计或本年支出 |
+| `fiscal_appropriation_income` | float/null | 财政拨款收入 |
+| `general_public_budget_appropriation_income` | float/null | 一般公共预算拨款收入 |
+| `government_fund_budget_appropriation_income` | float/null | 政府性基金预算拨款收入 |
+| `undertaking_income` | float/null | 事业收入 |
+| `other_income` | float/null | 其他收入 |
+| `non_fiscal_surplus_used` | float/null | 使用非财政拨款结余 |
+| `carryover_from_previous_year` | float/null | 上年结转 |
+| `carryover_to_next_year` | float/null | 结转下年 |
+| `current_year_fiscal_appropriation_expense` | float/null | 本年财政拨款支出 |
+| `education_expense` 等支出科目 | float/null | 按功能科目抽取的支出候选 |
+| `source_types` | string | `official_pdf`、`official_html` 等来源类型 |
+| `source_urls` / `source_pdfs` | string | 该行使用过的来源 URL 和本地 PDF |
+| `metric_codes_available` | string | 该学校-年份-文档已有的指标代码 |
+| `verified_any` | bool | 当前候选中是否有任何人工核验标记 |
+
+C9 子表和透视表：
+
+```text
+data/processed/c9_official_finance_comparison_budget_total_pivot.csv
+data/processed/c9_official_finance_current_year_income_total_pivot.csv
+data/processed/c9_official_finance_current_year_expense_total_pivot.csv
+data/processed/c9_official_finance_carryover_from_previous_year_pivot.csv
+data/processed/c9_official_finance_carryover_to_next_year_pivot.csv
+data/processed/c9_official_finance_comparison_metric_code_pivot.csv
+```
+
+这些透视表只覆盖 C9 的 2013-2026 年官方预算候选；缺失年份或缺失指标保持空值。
+
 原始官方来源登记表：
 
 ```text

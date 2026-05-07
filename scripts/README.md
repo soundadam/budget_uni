@@ -128,6 +128,31 @@ python scripts/build_c9_official_preferred.py
 
 增速图的 y 轴采用 symlog，并启用 minor ticks；CAGR 只作为长期概览，不替代年度同比。
 
+如果需要区分“收支总预算/收入总计/支出总计”和“本年收入/本年支出/结转”等口径，生成官方财务事实派生宽表：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python scripts/build_official_finance_derived.py
+```
+
+输出：
+
+- `data/processed/university_finance_fact_derived.csv`
+- `data/processed/c9_official_finance_fact_derived.csv`
+- `data/processed/c9_official_finance_comparison_budget_total_pivot.csv`
+- `data/processed/c9_official_finance_current_year_income_total_pivot.csv`
+- `data/processed/c9_official_finance_current_year_expense_total_pivot.csv`
+- `data/processed/c9_official_finance_carryover_from_previous_year_pivot.csv`
+- `data/processed/c9_official_finance_carryover_to_next_year_pivot.csv`
+- `data/processed/c9_official_finance_metric_coverage.csv`
+- `data/processed/figures/dev/c9_official_finance_total_budget_dev.png`
+- `data/processed/figures/dev/c9_official_finance_current_year_expense_dev.png`
+- `data/processed/figures/dev/c9_official_finance_carryover_to_next_year_dev.png`
+- `data/processed/figures/dev/c9_official_finance_current_expense_share_dev.png`
+- `data/processed/figures/dev/c9_official_finance_2026_structure_dev.png`
+
+缺失指标保持空值；`comparison_metric_code` 记录总规模比较实际采用 `budget_total`、`income_total` 还是 `expense_total`。
+
 ## Release Assets
 
 官方 PDF 和 `data/interim/` cache 不进入 Git；发布时生成本地 Release assets：
