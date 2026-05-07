@@ -18,6 +18,7 @@ budget_uni/
       ocr/                 # PaddleOCR 或多模态模型的临时 OCR 结果
       official_pdf_text/   # 官方 PDF 抽出的纯文本
       official_budget_tables/ # 官方 PDF 抽出的表候选
+      official_html_budget_pages/ # 官方 HTML 正文页抽出的事实候选
       source_discovery/    # 批量来源发现的中间结果
     processed/             # 人工校验后的标准数据
   docs/
@@ -83,3 +84,20 @@ data/processed/ministry_university_financial_table.csv
 2. 优先在 dev 环境下跑 `scripts/paddleocr_extract.py` 得到原始 OCR JSON。
 3. 对 OCR 或多模态识别结果做逐年人工校验，输出 `data/processed/ministry_university_budget.csv`。
 4. 在 `notebooks/` 里做年度总量、排名变化、同比增速和高校分组分析。
+
+## 官方 HTML 预算页抽取
+
+`scripts/official_html_extract.py` 读取 `data/raw/official_sources.csv`，筛选 `source_level=official_page` 且 `document_type=budget` 的官方 HTML 正文页，输出与 `official_finance_fact_candidates.csv` 同列的候选表：
+
+```zsh
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python scripts/official_html_extract.py
+```
+
+当前最小可用样本优先覆盖上海交通大学 2016 官方 HTML 页面，可单页复现：
+
+```zsh
+python scripts/official_html_extract.py --only-url https://gk.sjtu.edu.cn/Phone/View/502 --sleep 0
+```
+
+输出位置：`data/interim/official_html_budget_pages/official_html_finance_fact_candidates.csv`。其中 `source_pdf` 留空，`source_url` 保留官方 HTML 页面地址。

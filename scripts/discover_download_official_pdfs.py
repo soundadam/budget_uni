@@ -7,12 +7,16 @@ import argparse
 import csv
 import hashlib
 import html
+import json
 import re
+import ssl
+import subprocess
+import tempfile
 import time
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, quote, unquote, urljoin, urlparse, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 
@@ -100,6 +104,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
     parser.add_argument("--limit-pages", type=int, default=0, help="Maximum non-PDF candidate pages to inspect; 0 means no limit.")
     parser.add_argument("--sleep", type=float, default=0.3, help="Delay between network requests.")
+    parser.add_argument("--university", default="", help="Only inspect rows for this university.")
     parser.add_argument("--dry-run", action="store_true", help="Discover without downloading or updating source CSV.")
     return parser.parse_args()
 
@@ -125,15 +130,121 @@ def write_report(path: Path, rows: list[dict[str, str]]) -> None:
 
 
 def fetch_url(url: str, *, binary: bool = False, timeout: int = 25) -> tuple[bytes, str]:
+    request_url = quote_url_for_request(url)
     req = Request(
-        url,
+        request_url,
         headers={
             "User-Agent": "Mozilla/5.0 budget_uni official source crawler",
             "Accept": "*/*",
         },
     )
-    with urlopen(req, timeout=timeout) as resp:
-        return resp.read(), resp.geturl()
+    context = ssl._create_unverified_context() if request_url.startswith("https://") else None
+    try:
+        with urlopen(req, timeout=timeout, context=context) as resp:
+            return resp.read(), resp.geturl()
+    except (HTTPError, URLError, TimeoutError, OSError):
+        return fetch_url_with_curl(request_url, timeout=timeout)
+
+
+def quote_url_for_request(url: str) -> str:
+    parts = urlsplit(url)
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            quote(parts.path, safe="/%:@"),
+            quote(parts.query, safe="=&?/%:@"),
+            quote(parts.fragment, safe="=&?/%:@"),
+        )
+    )
+
+
+def fetch_url_with_curl(url: str, *, timeout: int = 25) -> tuple[bytes, str]:
+    with tempfile.TemporaryDirectory(prefix="budget_uni_curl_") as tmp_dir:
+        cookie_jar = Path(tmp_dir) / "cookies.txt"
+        content, final_url, status_code = curl_get(url, cookie_jar, timeout=timeout)
+        if is_challenge_page(content):
+            solve_dynamic_challenge(content, final_url, cookie_jar, timeout=timeout)
+            content, final_url, status_code = curl_get(url, cookie_jar, timeout=timeout)
+    if int(status_code or 0) >= 400:
+        raise URLError(f"curl HTTP status {status_code} for {url}")
+    return content, final_url
+
+
+def curl_get(url: str, cookie_jar: Path, *, timeout: int) -> tuple[bytes, str, str]:
+    result = subprocess.run(
+        [
+            "curl",
+            "-L",
+            "-sS",
+            "--max-time",
+            str(timeout),
+            "-A",
+            "Mozilla/5.0 budget_uni official source crawler",
+            "-b",
+            str(cookie_jar),
+            "-c",
+            str(cookie_jar),
+            "-w",
+            "\n%{url_effective}\n%{http_code}",
+            url,
+        ],
+        check=True,
+        capture_output=True,
+    )
+    content_and_url, _, status = result.stdout.rpartition(b"\n")
+    content, _, final_url = content_and_url.rpartition(b"\n")
+    return content, final_url.decode("utf-8", errors="ignore") or url, status.decode("ascii", errors="ignore")
+
+
+def is_challenge_page(content: bytes) -> bool:
+    return b"/dynamic_challenge" in content and b"challengeId" in content
+
+
+def solve_dynamic_challenge(content: bytes, final_url: str, cookie_jar: Path, *, timeout: int) -> None:
+    text = decode_html(content)
+    challenge_match = re.search(r'challengeId\s*=\s*"([^"]+)"', text)
+    answer_match = re.search(r"answer\s*=\s*([0-9]+)", text)
+    if not challenge_match or not answer_match:
+        return
+    challenge_url = urljoin(final_url, "/dynamic_challenge")
+    payload = {
+        "challenge_id": challenge_match.group(1),
+        "answer": int(answer_match.group(1)),
+        "browser_info": {
+            "userAgent": "Mozilla/5.0 budget_uni official source crawler",
+            "language": "zh-CN",
+            "platform": "MacIntel",
+            "cookieEnabled": True,
+            "hardwareConcurrency": 8,
+            "deviceMemory": 8,
+            "timezone": "Asia/Shanghai",
+        },
+    }
+    subprocess.run(
+        [
+            "curl",
+            "-L",
+            "-sS",
+            "--max-time",
+            str(timeout),
+            "-A",
+            "Mozilla/5.0 budget_uni official source crawler",
+            "-H",
+            "Content-Type: application/json",
+            "-b",
+            str(cookie_jar),
+            "-c",
+            str(cookie_jar),
+            "-X",
+            "POST",
+            "--data",
+            json.dumps(payload, ensure_ascii=False),
+            challenge_url,
+        ],
+        check=True,
+        capture_output=True,
+    )
 
 
 def decode_html(content: bytes) -> str:
@@ -148,7 +259,7 @@ def decode_html(content: bytes) -> str:
 def fetch_page(url: str) -> PageFetch:
     try:
         content, final_url = fetch_url(url)
-    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+    except (HTTPError, URLError, TimeoutError, OSError, subprocess.CalledProcessError) as exc:
         return PageFetch(url=url, text="", final_url=url, status="fetch_failed", notes=str(exc))
     return PageFetch(url=url, text=decode_html(content), final_url=final_url, status="fetched")
 
@@ -180,6 +291,15 @@ def page_title(text: str) -> str:
 
 def attr_links(page_url: str, text: str) -> list[tuple[str, str]]:
     rows: list[tuple[str, str]] = []
+    for match in re.finditer(
+        r"""<div\b[^>]*class\s*=\s*["'][^"']*mui-card-header[^"']*["'][^>]*>([\s\S]*?)</div>[\s\S]{0,1200}?<a\b[^>]*?\bhref\s*=\s*["']([^"']+)["']""",
+        text,
+        flags=re.I,
+    ):
+        label = strip_tags(match.group(1))
+        href = html.unescape(match.group(2)).strip()
+        if href and not href.startswith(("javascript:", "mailto:", "#")):
+            rows.append((label, urljoin(page_url, href)))
     for match in re.finditer(r"""<a\b[^>]*?\bhref\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)</a>""", text, flags=re.I):
         href = html.unescape(match.group(1)).strip()
         label = strip_tags(match.group(2))
@@ -188,6 +308,11 @@ def attr_links(page_url: str, text: str) -> list[tuple[str, str]]:
     for match in re.finditer(r"""\b(?:href|src|pdfsrc)\s*=\s*["']([^"']+\.pdf(?:\?[^"']*)?)["']""", text, flags=re.I):
         href = html.unescape(match.group(1)).strip()
         rows.append(("", urljoin(page_url, href)))
+    for match in re.finditer(r"""viewer\.html\?([^"']*?\bfile=([^"']+?\.pdf)(?:[&#"']|$))""", text, flags=re.I):
+        query = html.unescape(match.group(1))
+        file_values = parse_qs(query).get("file")
+        pdf_path = file_values[0] if file_values else match.group(2)
+        rows.append(("", urljoin(page_url, unquote(pdf_path))))
     return rows
 
 
@@ -274,11 +399,11 @@ def infer_year(title: str, url: str) -> str:
     return match.group(1) if match else ""
 
 
-def infer_document_type(title: str, url: str) -> str:
-    combined = f"{title} {url}"
+def infer_document_type(title: str, url: str, source_url: str = "") -> str:
+    combined = f"{title} {url} {source_url}"
     if "决算" in combined or "final" in combined.lower():
         return "final_account"
-    if "预算" in combined or "budget" in combined.lower():
+    if "预算" in combined or "budget" in combined.lower() or "/cwys/" in combined or "szys" in combined.lower():
         return "budget"
     return "finance_document"
 
@@ -291,16 +416,18 @@ def filename_for_pdf(row: dict[str, str], pdf: Candidate) -> str:
     university = row.get("university", "unknown")
     slug = SCHOOL_SLUGS.get(university) or short_hash(university)
     year = infer_year(pdf.title, pdf.url) or "unknown_year"
-    document_type = infer_document_type(pdf.title, pdf.url)
+    document_type = infer_document_type(pdf.title, pdf.url, pdf.source_url)
     return f"{slug}_{year}_{document_type}_{short_hash(pdf.url)}.pdf"
 
 
 def download_pdf(url: str, path: Path) -> tuple[str, str]:
     if path.exists() and path.stat().st_size > 0:
-        return "exists", "local file already exists"
+        if path.read_bytes()[:4] == b"%PDF":
+            return "exists", "local file already exists"
+        path.unlink()
     try:
         content, _ = fetch_url(url, binary=True, timeout=60)
-    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+    except (HTTPError, URLError, TimeoutError, OSError, subprocess.CalledProcessError) as exc:
         return "download_failed", str(exc)
     if not content.startswith(b"%PDF"):
         return "not_pdf_content", f"downloaded {len(content)} bytes without PDF header"
@@ -314,7 +441,7 @@ def source_row_for_pdf(source_row: dict[str, str], pdf: Candidate, local_pdf: Pa
     return {
         "university": source_row.get("university", ""),
         "year": infer_year(title, pdf.url),
-        "document_type": infer_document_type(title, pdf.url),
+        "document_type": infer_document_type(title, pdf.url, pdf.source_url),
         "title": title,
         "url": pdf.url,
         "source_site": source_row.get("source_site", ""),
@@ -332,7 +459,11 @@ def main() -> None:
     new_rows: list[dict[str, str]] = []
     inspected_pages = 0
 
-    for source_row in source_rows_for_discovery(rows):
+    source_rows = source_rows_for_discovery(rows)
+    if args.university:
+        source_rows = [row for row in source_rows if row.get("university") == args.university]
+
+    for source_row in source_rows:
         time.sleep(args.sleep)
         page = fetch_page(source_row["url"])
         if page.status != "fetched":

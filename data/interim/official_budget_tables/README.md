@@ -96,20 +96,23 @@ python budget_uni/scripts/process_all_official_pdfs.py
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
 python budget_uni/scripts/discover_download_official_pdfs.py --sleep 0.2
+python budget_uni/scripts/discover_download_official_pdfs.py --university 南京大学 --sleep 0.1
+python budget_uni/scripts/discover_download_official_pdfs.py --university 上海交通大学 --sleep 0.1
 python budget_uni/scripts/normalize_official_source_metadata.py
 python budget_uni/scripts/process_all_official_pdfs.py --reuse-existing-outputs
+python budget_uni/scripts/build_c9_official_preferred.py
 ```
 
-已处理 144 个官方财务 PDF，覆盖预算和部分决算：
+已处理 201 个官方财务 PDF，覆盖预算和部分决算：
 
 | 机构 | 口径 | PDF | 长表事实候选行 |
 | --- | --- | ---: | ---: |
 | 清华大学 | 预算 | 14 | 722 |
-| 北京大学 | 预算/决算 | 13 | 262 |
+| 北京大学 | 预算/决算 | 24 | 297 |
 | 浙江大学 | 预算/决算 | 19 | 259 |
-| 上海交通大学 | 预算 | 1 | 22 |
+| 上海交通大学 | 预算 | 10 | 308 |
 | 复旦大学 | 预算/决算 | 36 | 731 |
-| 南京大学 | 预算 | 1 | 38 |
+| 南京大学 | 预算 | 14 | 166 |
 | 中国科学技术大学 | 预算 | 10 | 232 |
 | 哈尔滨工业大学 | 预算 | 6 | 93 |
 | 北京理工大学 | 预算/决算 | 12 | 185 |
@@ -117,13 +120,49 @@ python budget_uni/scripts/process_all_official_pdfs.py --reuse-existing-outputs
 | 教育部 | 预算/决算 | 11 | 355 |
 | 中国科学院 | 预算/决算 | 15 | 1019 |
 | 中国科学院上海药物研究所 | 预算 | 1 | 56 |
+| 西安交通大学 | 预算/决算 | 24 | 804 |
 
 总计：
 
 | 输出 | 数量 |
 | --- | ---: |
-| PDF | 144 |
-| 长表事实候选行 | 4095 |
-| 暂无字段候选的 PDF | 7 |
+| PDF | 201 |
+| 长表事实候选行 | 5348 |
+| 暂无字段候选的 PDF | 14 |
 
 当前核心字段已经覆盖 `收入总计`、`本年收入合计`、`财政拨款/一般公共预算拨款收入`、`事业收入`、`其他收入`、`上年结转`、`使用非财政拨款结余`、`本年支出合计`、`支出总计` 等。但这些仍是机器候选，进入 processed 前必须核对 PDF 原表。
+
+## 横向比较维度
+
+官方 PDF 不只适合抽预算总额。后续清洗进 `processed/` 时，建议优先派生这些可比较指标：
+
+| 维度 | 字段 | 可派生指标 | 备注 |
+| --- | --- | --- | --- |
+| 总量口径 | `budget_total`、`income_total`、`expense_total` | 年度预算规模、年度同比增速 | 优先级建议为 `budget_total > income_total > expense_total`。 |
+| 本年口径 | `current_year_income_total`、`current_year_expense_total` | 本年收入/支出规模、本年口径增速 | 与 `income_total` 的差额通常来自结转结余。 |
+| 财政依赖 | `fiscal_appropriation_income`、`general_public_budget_appropriation_income`、`government_fund_budget_appropriation_income` | 财政拨款占比、一般公共预算拨款占比 | 不同主管部门高校可横向比较财政依赖度。 |
+| 自筹能力 | `undertaking_income`、`other_income` | 事业收入占比、其他收入占比、非财政收入占比 | 适合比较高校自身收入结构。 |
+| 结转结余 | `carryover_from_previous_year`、`carryover_to_next_year`、`non_fiscal_surplus_used` | 上年结转占比、结转下年占比、结余使用规模 | 适合观察预算执行压力和资金沉淀。 |
+| 支出结构 | `education_expense`、`science_technology_expense`、`social_security_employment_expense`、`housing_security_expense` | 教育支出占比、科研支出占比、刚性支出占比 | 科目在不同主管部门、不同年份会有差异，需保留原指标名。 |
+| 主管部门 | `source_site` 或后续 `university_dimensions.department` | 教育部/工信部/中科院系统分组 | C9 内部尤其需要区分主管部门。 |
+
+建议下一步生成一个宽表 `data/processed/university_finance_fact_derived.csv`，粒度为 `institution_name + year + document_type`。不要把预算、决算、本年收入、收入总计混成一个字段；需要同时保留原始 `metric_code` 和最终选用的 `comparison_metric`。
+
+## C9 官方预算缺口
+
+截至当前批次，C9 官方预算来源覆盖情况如下：
+
+| 高校 | 已有官方预算来源年份 | 2013-2026 缺口/备注 |
+| --- | --- | --- |
+| 清华大学 | 2013-2026 | 已覆盖。 |
+| 北京大学 | 2016-2026 | 缺 2013-2015；C9 分析中 2021 仍回退，需核对 2021 官方 PDF 是否为有效预算文件而非误抓附件。 |
+| 浙江大学 | 2014-2026 | 缺 2013。 |
+| 上海交通大学 | 2016-2026 | 缺 2013-2015；2016 为官方 HTML 正文预算页，已由 HTML 抽取候选进入 C9 图。 |
+| 复旦大学 | 2012、2013、2015、2017-2026 | 缺 2014、2016；2016 C9 图暂用旧 OCR 回退。 |
+| 南京大学 | 2013-2026 | 已覆盖；2013-2020、2022-2025 主要由 OCR/正文候选补出，仍需人工核表。 |
+| 中国科学技术大学 | 2017-2026 | 缺 2013-2016。 |
+| 哈尔滨工业大学 | 2021-2026 | 缺 2013-2020。 |
+| 西安交通大学 | 2014-2020、2022-2026 | 用户已迁移本地官方 PDF，已纳入抽取。缺 2013、2021；2013 仅有决算，2021 C9 图暂用旧 OCR 回退。 |
+
+当前 C9 图 `data/processed/figures/c9_budget_trend_official_preferred.png` 和
+`data/processed/figures/c9_budget_growth_official_preferred.png` 使用官方 PDF/HTML 候选优先、旧第三方 OCR 回退。当前分析窗口已扩展为 2013-2026；上交 2016 已使用官方 HTML 候选，上交 2017-2026、南大 2013-2026、西交 2014-2020 和 2022-2026 已切到官方 PDF 候选。西交 2021、复旦 2016 仍是回退或待抽取状态。

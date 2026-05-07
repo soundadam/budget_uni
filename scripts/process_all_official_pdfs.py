@@ -113,6 +113,9 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Reuse existing per-PDF text/table/fact CSVs when a non-empty facts file already exists.",
     )
+    parser.add_argument("--only-university", action="append", default=[], help="Process only rows for this university. Repeatable.")
+    parser.add_argument("--only-document-type", action="append", default=[], help="Process only rows for this document type. Repeatable.")
+    parser.add_argument("--only-year", action="append", default=[], help="Process only rows for this year. Repeatable.")
     return parser.parse_args()
 
 
@@ -162,15 +165,20 @@ def basename_from_url(url: str) -> str:
 
 
 def local_filename_from_notes(notes: str) -> str:
-    match = re.search(r"本地文件\s*([A-Za-z0-9_.-]+\.pdf)", notes or "")
+    match = re.search(r"本地文件\s*([A-Za-z0-9_.\-/\u4e00-\u9fff]+\.pdf)", notes or "")
     return match.group(1) if match else ""
 
 
 def find_local_pdf(row: dict[str, str], pdfs: list[Path], used: set[Path]) -> Path | None:
     noted_filename = local_filename_from_notes(row.get("notes", ""))
     if noted_filename:
+        noted_path = Path(noted_filename)
         for pdf in pdfs:
-            if pdf.name == noted_filename:
+            try:
+                relative_pdf = pdf.relative_to(DEFAULT_PDF_DIR)
+            except ValueError:
+                relative_pdf = pdf
+            if pdf.name == noted_filename or relative_pdf == noted_path:
                 used.add(pdf)
                 return pdf
 
@@ -443,11 +451,20 @@ def main() -> None:
     args.report_dir.mkdir(parents=True, exist_ok=True)
 
     sources = read_sources(args.source_csv)
-    pdfs = sorted(args.pdf_dir.glob("*.pdf"))
+    pdfs = sorted(args.pdf_dir.rglob("*.pdf"))
     used: set[Path] = set()
     inventory_rows: list[dict[str, str]] = []
 
-    for row in pdf_url_rows(sources):
+    rows_to_process = pdf_url_rows(sources)
+    if args.only_university:
+        rows_to_process = [row for row in rows_to_process if row.get("university") in set(args.only_university)]
+    if args.only_document_type:
+        rows_to_process = [row for row in rows_to_process if row.get("document_type") in set(args.only_document_type)]
+    if args.only_year:
+        years = {str(year) for year in args.only_year}
+        rows_to_process = [row for row in rows_to_process if str(row.get("year", "")).split(".")[0] in years]
+
+    for row in rows_to_process:
         pdf = find_local_pdf(row, pdfs, used)
         if pdf is None:
             inventory_rows.append(

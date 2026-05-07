@@ -93,6 +93,12 @@ def infer_doc_type(text: str, row: dict[str, str]) -> str:
         if university.startswith("中国科学院") and university != "中国科学院":
             return "institute_budget"
         return "budget"
+    notes = row.get("notes", "")
+    combined = f"{row.get('title', '')} {row.get('url', '')} {notes}"
+    if "决算" in combined or "/cwjs/" in combined:
+        return "final_account"
+    if "预算" in combined or "/cwys/" in combined or "szys" in combined.lower():
+        return "budget"
     return base_type
 
 
@@ -138,7 +144,11 @@ def main() -> None:
         new_year = infer_year(text, row)
 
         if old_doc_type == "finance_document" and new_doc_type == "finance_document":
-            removed += 1
+            if text:
+                removed += 1
+                continue
+            row["notes"] = append_note(row.get("notes", ""), "PDF文本暂未生成，暂保留为待判别官方PDF")
+            kept_rows.append(row)
             continue
 
         if new_doc_type != old_doc_type or new_year != str(row.get("year", "")).split(".")[0]:
