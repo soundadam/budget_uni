@@ -1,0 +1,70 @@
+year,rank,university,budget_original,budget_unit,budget_yi_yuan,source_image,source_url,extraction_method,verified,notes,group,growth_rate,growth_percent
+2017,4,上海交通大学,140.77亿元,亿元,140.77,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.19266288231805473,19.266288231805472
+2018,3,上海交通大学,144.88亿元,亿元,144.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.029196561767421914,2.9196561767421914
+2019,8,上海交通大学,156.32亿元,亿元,156.32,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.078961899503037,7.8961899503037
+2020,5,上海交通大学,164.90亿元,亿元,164.9,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.05488741044012291,5.488741044012291
+2021,5,上海交通大学,175.65亿元,亿元,175.65,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.06519102486355366,6.519102486355366
+2022,4,上海交通大学,204.2亿元,亿元,204.2,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,0.16253914033589512,16.25391403358951
+2023,3,上海交通大学,265.16亿元,亿元,265.16,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.2985308521057788,29.85308521057788
+2024,3,上海交通大学,281.58亿元,亿元,281.58,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.061924875546839564,6.192487554683956
+2025,3,上海交通大学,294.48亿元,亿元,294.48,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.04581291284892397,4.581291284892397
+2026,3,上海交通大学,304.11亿元,亿元,304.11,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.03270171149144252,3.270171149144252
+2017,2,北京大学,193.45亿元,亿元,193.45,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.2634707073345959,26.34707073345959
+2018,6,北京大学,125.54亿元,亿元,125.54,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,-0.35104678211424134,-35.10467821142414
+2019,1,北京大学,190.06亿元,亿元,190.06,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.513939780149753,51.393978014975296
+2020,3,北京大学,191.08亿元,亿元,191.08,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.005366726296959001,0.5366726296959001
+2021,3,北京大学,221.34亿元,亿元,221.34,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.1583629893238434,15.836298932384341
+2022,3,北京大学,219.29亿元,亿元,219.29,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,-0.009261769223818606,-0.9261769223818606
+2023,4,北京大学,222.47亿元,亿元,222.47,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.014501345250581554,1.4501345250581554
+2024,4,北京大学,243.30亿元,亿元,243.3,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.09363060187890504,9.363060187890504
+2025,4,北京大学,259.14亿元,亿元,259.14,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.06510480887792847,6.510480887792847
+2026,4,北京大学,280.49亿元,亿元,280.49,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.08238789843327932,8.238789843327933
+2017,16,南京大学,69.33亿元,亿元,69.33,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.21588916169764993,21.588916169764993
+2018,14,南京大学,81.26亿元,亿元,81.26,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.17207558055675753,17.207558055675754
+2019,14,南京大学,77.53亿元,亿元,77.53,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,-0.04590204282549848,-4.590204282549848
+2020,19,南京大学,79.29亿元,亿元,79.29,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.02270088997807318,2.270088997807318
+2021,18,南京大学,86.39亿元,亿元,86.39,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.08954470929499303,8.954470929499303
+2022,23,南京大学,93.47亿元,亿元,93.47,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,0.08195392985299232,8.195392985299232
+2023,21,南京大学,97.49亿元,亿元,97.49,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.04300845190970359,4.300845190970359
+2024,13,南京大学,121.41亿元,亿元,121.41,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.24535849830751877,24.53584983075188
+2025,18,南京大学,127.18亿元,亿元,127.18,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.047524915575323456,4.752491557532346
+2026,17,南京大学,146.67亿元,亿元,146.67,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.15324736593804045,15.324736593804044
+2017,7,复旦大学,100.41亿元,亿元,100.41,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.27423857868020307,27.423857868020306
+2018,7,复旦大学,108.90亿元,亿元,108.9,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.0845533313414999,8.455333134149988
+2019,9,复旦大学,125.09亿元,亿元,125.09,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.14866850321395764,14.866850321395763
+2020,6,复旦大学,136.21亿元,亿元,136.21,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.08889599488368383,8.889599488368383
+2021,6,复旦大学,141.62亿元,亿元,141.62,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.03971808237280672,3.971808237280672
+2022,6,复旦大学,171.55亿元,亿元,171.55,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,0.21134020618556715,21.134020618556715
+2023,6,复旦大学,178.69亿元,亿元,178.69,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.041620518799183825,4.1620518799183825
+2024,5,复旦大学,182.26亿元,亿元,182.26,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.01997873412054396,1.9978734120543962
+2025,7,复旦大学,182.95亿元,亿元,182.95,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.0037858005047732846,0.37858005047732846
+2026,7,复旦大学,62.66亿元,亿元,62.66,2026.png,,paddleocr_row,False,高排名金额偏低，疑似OCR缺位，需人工复核; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,-0.6575020497403662,-65.75020497403662
+2017,3,浙江大学,150.47亿元,亿元,150.47,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,-0.024695359087373636,-2.4695359087373636
+2018,2,浙江大学,154.65亿元,亿元,154.65,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.027779623845284762,2.777962384528476
+2019,3,浙江大学,191.77亿元,亿元,191.77,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.24002586485612687,24.00258648561269
+2020,2,浙江大学,216.20亿元,亿元,216.2,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.12739218855921153,12.739218855921152
+2021,2,浙江大学,228.16亿元,亿元,228.16,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.05531914893617018,5.531914893617018
+2022,2,浙江大学,261.03亿元,亿元,261.03,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,0.1440655680224403,14.40655680224403
+2023,2,浙江大学,309.01亿元,亿元,309.01,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.18381029000498028,18.381029000498028
+2024,2,浙江大学,328.61亿元,亿元,328.61,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.06342836801398022,6.342836801398022
+2025,2,浙江大学,352.31亿元,亿元,352.31,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.07212196829067885,7.212196829067885
+2026,2,浙江大学,382.46亿元,亿元,382.46,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.08557804206522657,8.557804206522658
+2017,1,清华大学,233.35亿元,亿元,233.35,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.28094636877641777,28.094636877641776
+2018,1,清华大学,269.45亿元,亿元,269.45,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.15470323548317966,15.470323548317966
+2019,2,清华大学,297.20亿元,亿元,297.2,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.10298756726665426,10.298756726665426
+2020,1,清华大学,310.72亿元,亿元,310.72,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.045491251682368894,4.549125168236889
+2021,1,清华大学,317.28亿元,亿元,317.28,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.021112255406796843,2.1112255406796843
+2023,1,清华大学,410.93亿元,亿元,410.93,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.29516515380736275,29.516515380736273
+2024,1,清华大学,385.69亿元,亿元,385.69,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,-0.061421653322950354,-6.142165332295035
+2025,1,清华大学,395.18亿元,亿元,395.18,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.024605252923332266,2.4605252923332266
+2026,1,清华大学,403.93亿元,亿元,403.93,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.022141808795991702,2.21418087959917
+2017,15,西安交通大学,70.44亿元,亿元,70.44,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,,C9,0.24960085151676425,24.960085151676424
+2018,15,西安交通大学,80.39亿元,亿元,80.39,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,,C9,0.14125496876774557,14.125496876774557
+2019,12,西安交通大学,88.17亿元,亿元,88.17,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,,C9,0.09677820624455769,9.67782062445577
+2020,10,西安交通大学,101.16亿元,亿元,101.16,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,,C9,0.1473290234773732,14.732902347737319
+2021,9,西安交通大学,114.68亿元,亿元,114.68,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,,C9,0.1336496638987743,13.36496638987743
+2022,10,西安交通大学,133.72亿元,亿元,133.72,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部,C9,0.16602720613882105,16.602720613882106
+2023,10,西安交通大学,146.29亿元,亿元,146.29,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,,C9,0.09400239306012548,9.400239306012548
+2024,8,西安交通大学,160.98亿元,亿元,160.98,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,,C9,0.10041697997128995,10.041697997128995
+2025,9,西安交通大学,107.25亿元,亿元,107.25,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,-0.33376816995900105,-33.37681699590011
+2026,8,西安交通大学,185.56亿元,亿元,185.56,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校,C9,0.7301631701631701,73.01631701631702

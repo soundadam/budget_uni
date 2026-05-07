@@ -1,0 +1,756 @@
+year,rank,university,budget_original,budget_unit,budget_yi_yuan,source_image,source_url,extraction_method,verified,notes
+2016,1,清华大学,182.17亿元,亿元,182.17,2016.jpg,,manual_from_source_image,False,
+2016,2,浙江大学,154.28亿元,亿元,154.28,2016.jpg,,manual_from_source_image,False,
+2016,3,北京大学,153.11亿元,亿元,153.11,2016.jpg,,manual_from_source_image,False,
+2016,4,上海交通大学,118.03亿元,亿元,118.03,2016.jpg,,manual_from_source_image,False,
+2016,5,复旦大学,78.80亿元,亿元,78.80,2016.jpg,,manual_from_source_image,False,
+2016,6,武汉大学,78.23亿元,亿元,78.23,2016.jpg,,manual_from_source_image,False,
+2016,7,山东大学,77.28亿元,亿元,77.28,2016.jpg,,manual_from_source_image,False,
+2016,8,中山大学,73.96亿元,亿元,73.96,2016.jpg,,manual_from_source_image,False,
+2016,9,华中科技大学,70.47亿元,亿元,70.47,2016.jpg,,manual_from_source_image,False,
+2016,10,天津大学,70.31亿元,亿元,70.31,2016.jpg,,manual_from_source_image,False,
+2016,11,四川大学,63.25亿元,亿元,63.25,2016.jpg,,manual_from_source_image,False,
+2016,12,同济大学,60.07亿元,亿元,60.07,2016.jpg,,manual_from_source_image,False,
+2016,13,南京大学,57.02亿元,亿元,57.02,2016.jpg,,manual_from_source_image,False,
+2016,14,西安交通大学,56.37亿元,亿元,56.37,2016.jpg,,manual_from_source_image,False,
+2016,15,厦门大学,55.79亿元,亿元,55.79,2016.jpg,,manual_from_source_image,False,
+2016,16,北京师范大学,53.67亿元,亿元,53.67,2016.jpg,,manual_from_source_image,False,
+2016,17,吉林大学,52.19亿元,亿元,52.19,2016.jpg,,manual_from_source_image,False,
+2016,18,南开大学,51.81亿元,亿元,51.81,2016.jpg,,manual_from_source_image,False,
+2016,19,华南理工大学,51.79亿元,亿元,51.79,2016.jpg,,manual_from_source_image,False,
+2016,20,东南大学,51.20亿元,亿元,51.20,2016.jpg,,manual_from_source_image,False,
+2016,21,中南大学,50.12亿元,亿元,50.12,2016.jpg,,manual_from_source_image,False,
+2016,22,大连理工大学,45.02亿元,亿元,45.02,2016.jpg,,manual_from_source_image,False,
+2016,23,中国人民大学,43.55亿元,亿元,43.55,2016.jpg,,manual_from_source_image,False,
+2016,24,华东师范大学,42.35亿元,亿元,42.35,2016.jpg,,manual_from_source_image,False,
+2016,25,武汉理工大学,41.51亿元,亿元,41.51,2016.jpg,,manual_from_source_image,False,
+2016,26,东北大学,40.54亿元,亿元,40.54,2016.jpg,,manual_from_source_image,False,
+2016,27,重庆大学,39.60亿元,亿元,39.60,2016.jpg,,manual_from_source_image,False,
+2016,28,电子科技大学,37.71亿元,亿元,37.71,2016.jpg,,manual_from_source_image,False,
+2016,29,北京交通大学,37.07亿元,亿元,37.07,2016.jpg,,manual_from_source_image,False,已区分2016年度预算数与年度收入合计; 收入合计为23.53亿元
+2016,30,中国地质大学（武汉）,34.62亿元,亿元,34.62,2016.jpg,,manual_from_source_image,False,
+2016,31,中国矿业大学,33.46亿元,亿元,33.46,2016.jpg,,manual_from_source_image,False,
+2016,32,中国石油大学（华东）,33.11亿元,亿元,33.11,2016.jpg,,manual_from_source_image,False,
+2016,33,北京科技大学,33.00亿元,亿元,33.00,2016.jpg,,manual_from_source_image,False,
+2016,34,中国石油大学（北京）,32.67亿元,亿元,32.67,2016.jpg,,manual_from_source_image,False,
+2016,35,兰州大学,32.43亿元,亿元,32.43,2016.jpg,,manual_from_source_image,False,
+2016,36,西南大学,32.39亿元,亿元,32.39,2016.jpg,,manual_from_source_image,False,
+2016,37,湖南大学,32.03亿元,亿元,32.03,2016.jpg,,manual_from_source_image,False,
+2016,38,西南交通大学,30.64亿元,亿元,30.64,2016.jpg,,manual_from_source_image,False,
+2016,39,北京化工大学,30.07亿元,亿元,30.07,2016.jpg,,manual_from_source_image,False,
+2016,40,西北农林科技大学,29.73亿元,亿元,29.73,2016.jpg,,manual_from_source_image,False,
+2016,41,河海大学,28.88亿元,亿元,28.88,2016.jpg,,manual_from_source_image,False,
+2016,42,西安电子科技大学,28.28亿元,亿元,28.28,2016.jpg,,manual_from_source_image,False,
+2016,43,南京农业大学,27.46亿元,亿元,27.46,2016.jpg,,manual_from_source_image,False,
+2016,44,华中农业大学,27.05亿元,亿元,27.05,2016.jpg,,manual_from_source_image,False,
+2016,45,华北电力大学,27.00亿元,亿元,27.00,2016.jpg,,manual_from_source_image,False,
+2016,46,合肥工业大学,26.63亿元,亿元,26.63,2016.jpg,,manual_from_source_image,False,
+2016,47,长安大学,26.53亿元,亿元,26.53,2016.jpg,,manual_from_source_image,False,
+2016,48,中国海洋大学,24.74亿元,亿元,24.74,2016.jpg,,manual_from_source_image,False,
+2016,49,华中师范大学,24.45亿元,亿元,24.45,2016.jpg,,manual_from_source_image,False,
+2016,50,江南大学,23.22亿元,亿元,23.22,2016.jpg,,manual_from_source_image,False,
+2016,51,北京邮电大学,22.55亿元,亿元,22.55,2016.jpg,,manual_from_source_image,False,
+2016,52,东北师范大学,22.36亿元,亿元,22.36,2016.jpg,,manual_from_source_image,False,
+2016,53,中国地质大学（北京）,20.85亿元,亿元,20.85,2016.jpg,,manual_from_source_image,False,
+2016,54,中南财经政法大学,20.16亿元,亿元,20.16,2016.jpg,,manual_from_source_image,False,
+2016,55,东华大学,19.58亿元,亿元,19.58,2016.jpg,,manual_from_source_image,False,
+2016,56,陕西师范大学,17.41亿元,亿元,17.41,2016.jpg,,manual_from_source_image,False,
+2016,57,对外经济贸易大学,16.07亿元,亿元,16.07,2016.jpg,,manual_from_source_image,False,
+2016,58,北京林业大学,15.67亿元,亿元,15.67,2016.jpg,,manual_from_source_image,False,
+2016,59,东北林业大学,14.84亿元,亿元,14.84,2016.jpg,,manual_from_source_image,False,
+2016,60,北京中医药大学,14.52亿元,亿元,14.52,2016.jpg,,manual_from_source_image,False,
+2016,61,中国药科大学,14.12亿元,亿元,14.12,2016.jpg,,manual_from_source_image,False,
+2016,62,上海财经大学,13.16亿元,亿元,13.16,2016.jpg,,manual_from_source_image,False,
+2016,63,中国矿业大学（北京）,12.31亿元,亿元,12.31,2016.jpg,,manual_from_source_image,False,
+2016,64,中国传媒大学,11.92亿元,亿元,11.92,2016.jpg,,manual_from_source_image,False,
+2016,65,中央财经大学,11.36亿元,亿元,11.36,2016.jpg,,manual_from_source_image,False,
+2016,66,北京外国语大学,10.18亿元,亿元,10.18,2016.jpg,,manual_from_source_image,False,
+2016,67,北京语言大学,10.15亿元,亿元,10.15,2016.jpg,,manual_from_source_image,False,
+2016,68,中国政法大学,9.91亿元,亿元,9.91,2016.jpg,,manual_from_source_image,False,
+2016,69,上海外国语大学,9.02亿元,亿元,9.02,2016.jpg,,manual_from_source_image,False,
+2016,70,中央音乐学院,4.20亿元,亿元,4.20,2016.jpg,,manual_from_source_image,False,
+2016,71,中央戏剧学院,3.05亿元,亿元,3.05,2016.jpg,,manual_from_source_image,False,
+2017,1,清华大学,233.35亿元,亿元,233.35,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,2,北京大学,193.45亿元,亿元,193.45,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,3,浙江大学,150.47亿元,亿元,150.47,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,4,上海交通大学,140.77亿元,亿元,140.77,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,5,中山大学,116.41亿元,亿元,116.41,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,6,天津大学,113.49亿元,亿元,113.49,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,7,复旦大学,100.41亿元,亿元,100.41,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,8,吉林大学,87.96亿元,亿元,87.96,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,9,武汉大学,87.49亿元,亿元,87.49,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,10,华中科技大学,84.22亿元,亿元,84.22,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,11,山东大学,79.90亿元,亿元,79.90,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,12,同济大学,76.65亿元,亿元,76.65,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,13,四川大学,76.25亿元,亿元,76.25,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,14,厦门大学,71.84亿元,亿元,71.84,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,15,西安交通大学,70.44亿元,亿元,70.44,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,16,南京大学,69.33亿元,亿元,69.33,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,17,中南大学,67.74亿元,亿元,67.74,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,18,南开大学,66.81亿元,亿元,66.81,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,19,华南理工大学,63.24亿元,亿元,63.24,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,20,北京师范大学,62.19亿元,亿元,62.19,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,21,东南大学,59.94亿元,亿元,59.94,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,22,大连理工大学,53.04亿元,亿元,53.04,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,23,中国人民大学,52.03亿元,亿元,52.03,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,24,华东师范大学,50.39亿元,亿元,50.39,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,25,中国农业大学,49.66亿元,亿元,49.66,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,26,重庆大学,47.94亿元,亿元,47.94,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,27,东北大学,47.76亿元,亿元,47.76,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,28,北京交通大学,46.38亿元,亿元,46.38,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,29,西南交通大学,45.20亿元,亿元,45.20,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,30,电子科技大学,41.81亿元,亿元,41.81,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,31,北京科技大学,41.48亿元,亿元,41.48,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,32,武汉理工大学,41.05亿元,亿元,41.05,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,33,湖南大学,40.60亿元,亿元,40.60,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,34,西南大学,38.67亿元,亿元,38.67,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,35,中国地质大学（武汉）,37.53亿元,亿元,37.53,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,36,中国石油大学（华东）,36.81亿元,亿元,36.81,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,37,中国矿业大学,36.57亿元,亿元,36.57,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,38,中国石油大学（北京）,36.32亿元,亿元,36.32,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,39,西北农林科技大学,35.36亿元,亿元,35.36,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,40,华东理工大学,35.12亿元,亿元,35.12,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,41,西安电子科技大学,34.16亿元,亿元,34.16,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,42,南京农业大学,32.79亿元,亿元,32.79,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,43,河海大学,28.88亿元,亿元,28.88,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,44,兰州大学,31.13亿元,亿元,31.13,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,45,合肥工业大学,29.52亿元,亿元,29.52,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,46,华北电力大学,27.79亿元,亿元,27.79,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,47,华中农业大学,27.37亿元,亿元,27.37,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,48,中国海洋大学,26.63亿元,亿元,26.63,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,49,华中师范大学,26.60亿元,亿元,26.60,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,50,长安大学,26.05亿元,亿元,26.05,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,51,江南大学,25.69亿元,亿元,25.69,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,52,东北师范大学,25.08亿元,亿元,25.08,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,53,陕西师范大学,24.77亿元,亿元,24.77,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,54,中国地质大学（北京）,23.93亿元,亿元,23.93,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,55,北京邮电大学,23.24亿元,亿元,23.24,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,56,东华大学,20.69亿元,亿元,20.69,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,57,中南财经政法大学,19.90亿元,亿元,19.90,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,58,北京中医药大学,18.30亿元,亿元,18.30,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,59,中国药科大学,17.84亿元,亿元,17.84,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,60,对外经济贸易大学,16.23亿元,亿元,16.23,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,61,西南财经大学,15.93亿元,亿元,15.93,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,62,上海财经大学,15.84亿元,亿元,15.84,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,63,东北林业大学,15.23亿元,亿元,15.23,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,64,北京林业大学,14.88亿元,亿元,14.88,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,65,中央财经大学,14.65亿元,亿元,14.65,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,66,中国矿业大学（北京）,14.21亿元,亿元,14.21,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,rank OCR疑似为99，按行序校正为66
+2017,67,中国传媒大学,12.40亿元,亿元,12.40,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,68,北京语言大学,12.35亿元,亿元,12.35,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,69,北京外国语大学,12.16亿元,亿元,12.16,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,70,中国政法大学,11.21亿元,亿元,11.21,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,71,北京化工大学,10.40亿元,亿元,10.40,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,72,上海外国语大学,9.96亿元,亿元,9.96,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,73,中央美术学院,7.61亿元,亿元,7.61,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,74,中央音乐学院,4.56亿元,亿元,4.56,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2017,75,中央戏剧学院,3.98亿元,亿元,3.98,2017.png,https://www.edu.cn/ke_yan_yu_fa_zhan/gao_xiao_cheng_guo/gao_xiao_zi_xun/201808/t20180813_1620842.shtml,paddleocr_strip,False,
+2018,1,清华大学,269.45亿元,亿元,269.45,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,2,浙江大学,154.65亿元,亿元,154.65,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,3,上海交通大学,144.88亿元,亿元,144.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,4,中山大学,134.92亿元,亿元,134.92,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,5,同济大学,134.21亿元,亿元,134.21,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,OCR漏识别预算总经费134.21; 已按原图补入
+2018,6,北京大学,125.54亿元,亿元,125.54,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,7,复旦大学,108.90亿元,亿元,108.90,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,8,华中科技大学,97.97亿元,亿元,97.97,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,9,吉林大学,97.65亿元,亿元,97.65,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,10,武汉大学,93.48亿元,亿元,93.48,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,11,四川大学,85.28亿元,亿元,85.28,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,12,山东大学,84.41亿元,亿元,84.41,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,13,天津大学,82.88亿元,亿元,82.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,14,南京大学,81.26亿元,亿元,81.26,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,15,西安交通大学,80.39亿元,亿元,80.39,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,16,厦门大学,76.81亿元,亿元,76.81,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,17,中南大学,73.02亿元,亿元,73.02,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,18,华南理工大学,71.75亿元,亿元,71.75,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,19,南开大学,69.15亿元,亿元,69.15,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,20,北京师范大学,66.12亿元,亿元,66.12,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,21,东南大学,44.70亿元,亿元,44.70,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,22,中国人民大学,57.79亿元,亿元,57.79,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,23,华东师范大学,57.03亿元,亿元,57.03,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,24,大连理工大学,55.59亿元,亿元,55.59,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,25,中国农业大学,55.45亿元,亿元,55.45,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,26,电子科技大学,53.83亿元,亿元,53.83,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,27,重庆大学,50.36亿元,亿元,50.36,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,28,北京交通大学,49.33亿元,亿元,49.33,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,29,东北大学,36.88亿元,亿元,36.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,30,武汉理工大学,48.42亿元,亿元,48.42,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,31,北京科技大学,47.01亿元,亿元,47.01,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,32,西安电子科技大学,45.10亿元,亿元,45.10,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,33,西南交通大学,44.98亿元,亿元,44.98,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,35,中国矿业大学,42.32亿元,亿元,42.32,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,36,中国石油大学（北京）,42.13亿元,亿元,42.13,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,37,湖南大学,41.43亿元,亿元,41.43,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,38,西南大学,41.10亿元,亿元,41.10,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,39,中国石油大学（华东）,28.02亿元,亿元,28.02,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,40,兰州大学,37.97亿元,亿元,37.97,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,41,北京化工大学,37.86亿元,亿元,37.86,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,42,河海大学,37.51亿元,亿元,37.51,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,43,西北农林科技大学,37.38亿元,亿元,37.38,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,44,华东理工大学,36.43亿元,亿元,36.43,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,45,中国海洋大学,35.81亿元,亿元,35.81,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,46,江南大学,34.50亿元,亿元,34.50,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,47,长安大学,34.20亿元,亿元,34.20,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,48,南京农业大学,34.03亿元,亿元,34.03,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,49,华北电力大学,30.48亿元,亿元,30.48,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,50,合肥工业大学,29.60亿元,亿元,29.60,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,51,华中师范大学,29.27亿元,亿元,29.27,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,52,东北师范大学,27.71亿元,亿元,27.71,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,53,北京邮电大学,25.75亿元,亿元,25.75,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,54,华中农业大学,24.89亿元,亿元,24.89,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,55,北京中医药大学,24.57亿元,亿元,24.57,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,56,中国地质大学（北京）,24.15亿元,亿元,24.15,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,57,东华大学,22.50亿元,亿元,22.50,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,58,陕西师范大学,21.88亿元,亿元,21.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,59,中国药科大学,19.78亿元,亿元,19.78,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,60,对外经济贸易大学,17.28亿元,亿元,17.28,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,61,东北林业大学,16.99亿元,亿元,16.99,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,62,上海财经大学,16.96亿元,亿元,16.96,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,63,中南财经政法大学,15.97亿元,亿元,15.97,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,64,中国矿业大学（北京）,15.92亿元,亿元,15.92,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,65,西南财经大学,15.83亿元,亿元,15.83,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,66,北京林业大学,14.70亿元,亿元,14.70,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,67,中国传媒大学,14.13亿元,亿元,14.13,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,68,中央财经大学,14.13亿元,亿元,14.13,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,69,上海外国语大学,13.96亿元,亿元,13.96,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,70,北京外国语大学,13.88亿元,亿元,13.88,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,71,中国政法大学,13.50亿元,亿元,13.50,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,72,北京语言大学,12.28亿元,亿元,12.28,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,73,中央美术学院,7.99亿元,亿元,7.99,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,74,中央音乐学院,6.20亿元,亿元,6.20,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2018,75,中央戏剧学院,4.27亿元,亿元,4.27,2018.jpeg,https://www.antpedia.com/news/99/n-2161799.html,paddleocr_strip,False,
+2019,1,北京大学,190.06亿元,亿元,190.06,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,2,清华大学,297.20亿元,亿元,297.20,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,3,浙江大学,191.77亿元,亿元,191.77,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,4,吉林大学,98.97亿元,亿元,98.97,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,5,武汉大学,106.44亿元,亿元,106.44,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,6,四川大学,94.48亿元,亿元,94.48,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,7,华中科技大学,106.98亿元,亿元,106.98,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,8,上海交通大学,156.32亿元,亿元,156.32,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,9,复旦大学,125.09亿元,亿元,125.09,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,10,山东大学,97.27亿元,亿元,97.27,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,11,中山大学,175.17亿元,亿元,175.17,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,12,西安交通大学,88.17亿元,亿元,88.17,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,13,中南大学,84.50亿元,亿元,84.50,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,14,南京大学,77.53亿元,亿元,77.53,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,15,北京师范大学,81.85亿元,亿元,81.85,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,16,西南大学,44.37亿元,亿元,44.37,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,17,同济大学,90.46亿元,亿元,90.46,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,18,天津大学,76.53亿元,亿元,76.53,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,19,厦门大学,81.93亿元,亿元,81.93,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,20,中国人民大学,63.92亿元,亿元,63.92,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,21,武汉理工大学,54.71亿元,亿元,54.71,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,22,东南大学,74.72亿元,亿元,74.72,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,23,重庆大学,51.80亿元,亿元,51.80,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,24,南开大学,66.35亿元,亿元,66.35,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,25,华南理工大学,70.98亿元,亿元,70.98,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,26,兰州大学,45.37亿元,亿元,45.37,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,27,东北大学,49.89亿元,亿元,49.89,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,28,大连理工大学,59.52亿元,亿元,59.52,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,29,西北农林科技大学,39.84亿元,亿元,39.84,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,30,华东师范大学,62.38亿元,亿元,62.38,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,31,电子科技大学,60.51亿元,亿元,60.51,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,32,华中师范大学,31.70亿元,亿元,31.70,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,33,西南交通大学,47.50亿元,亿元,47.50,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,34,湖南大学,45.56亿元,亿元,45.56,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,35,中国地质大学（武汉）,41.79亿元,亿元,41.79,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,36,中国农业大学,56.20亿元,亿元,56.20,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,37,合肥工业大学,32.49亿元,亿元,32.49,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2019,38,西安电子科技大学,46.43亿元,亿元,46.43,2019.jpg,https://www.sohu.com/a/311077070_503494,paddleocr_row,False,
+2020,1,清华大学,310.72亿元,亿元,310.72,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,2,浙江大学,216.20亿元,亿元,216.20,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,3,北京大学,191.08亿元,亿元,191.08,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,4,中山大学,186.93亿元,亿元,186.93,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,5,上海交通大学,164.90亿元,亿元,164.90,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,6,复旦大学,136.21亿元,亿元,136.21,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,7,山东大学,115.29亿元,亿元,115.29,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,8,华中科技大学,113.61亿元,亿元,113.61,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,9,东南大学,104.39亿元,亿元,104.39,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,10,西安交通大学,101.16亿元,亿元,101.16,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,11,武汉大学,98.59亿元,亿元,98.59,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,12,四川大学,98.55亿元,亿元,98.55,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,13,吉林大学,95.31亿元,亿元,95.31,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,14,同济大学,94.95亿元,亿元,94.95,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,15,天津大学,87.57亿元,亿元,87.57,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,16,北京师范大学,86.35亿元,亿元,86.35,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,17,中南大学,81.84亿元,亿元,81.84,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,18,华南理工大学,81.83亿元,亿元,81.83,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,19,南京大学,79.29亿元,亿元,79.29,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,20,中国人民大学,74.42亿元,亿元,74.42,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,21,厦门大学,72.83亿元,亿元,72.83,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,22,电子科技大学,68.50亿元,亿元,68.50,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,23,大连理工大学,65.26亿元,亿元,65.26,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,24,华东师范大学,62.78亿元,亿元,62.78,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,25,南开大学,62.65亿元,亿元,62.65,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,26,重庆大学,58.92亿元,亿元,58.92,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,27,北京交通大学,58.65亿元,亿元,58.65,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,28,武汉理工大学,57.20亿元,亿元,57.20,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,29,湖南大学,54.67亿元,亿元,54.67,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,30,中国农业大学,53.96亿元,亿元,53.96,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,31,兰州大学,52.57亿元,亿元,52.57,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,32,东北大学/,51.46亿元,亿元,51.46,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,33,西南交通大学,49.28亿元,亿元,49.28,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,34,北京科技大学,49.14亿元,亿元,49.14,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,35,西南大学,48.80亿元,亿元,48.80,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,36,西安电子科技大学,47.95亿元,亿元,47.95,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,37,中国海洋大学,45.39亿元,亿元,45.39,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,38,河海大学,44.54亿元,亿元,44.54,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,39,中国石油大学（华东）,43.48亿元,亿元,43.48,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,40,中国地质大学（武汉）,42.31亿元,亿元,42.31,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,41,中国石油大学（北京）,42.30亿元,亿元,42.30,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,42,西北农林科技大学,41.61亿元,亿元,41.61,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,43,中国矿业大学,40.16亿元,亿元,40.16,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,44,长安大学,37.77亿元,亿元,37.77,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,45,华东理工大学,37.68亿元,亿元,37.68,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,46,江南大学,36.44亿元,亿元,36.44,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,47,华中农业大学,35.64亿元,亿元,35.64,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,48,南京农业大学,34.13亿元,亿元,34.13,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,49,华中师范大学,33.64亿元,亿元,33.64,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,50,合肥工业大学,33.48亿元,亿元,33.48,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,52,陕西师范大学,29.04亿元,亿元,29.04,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,53,东北师范大学,28.34亿元,亿元,28.34,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,54,北京化工大学,26.61亿元,亿元,26.61,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,55,北京中医药大学,26.02亿元,亿元,26.02,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,56,东华大学,25.25亿元,亿元,25.25,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,57,中国药科大学,25.08亿元,亿元,25.08,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,58,中国地质大学（北京）,24.08亿元,亿元,24.08,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,59,华北电力大学（北京）,23.72亿元,亿元,23.72,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,61,中南财经政法大学,22.74亿元,亿元,22.74,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,62,北京林业大学,22.47亿元,亿元,22.47,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,63,西南财经大学,19.65亿元,亿元,19.65,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,64,中国矿业大学（北京）,19.30亿元,亿元,19.30,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,65,中央财经大学,18.86亿元,亿元,18.86,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,66,东北林业大学,18.20亿元,亿元,18.20,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,67,上海财经大学,17.90亿元,亿元,17.90,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,68,中国政法大学,17.06亿元,亿元,17.06,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,69,对外经济贸易大学,16.58亿元,亿元,16.58,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,70,北京外国语大学,14.93亿元,亿元,14.93,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,71,北京语言大学,13.02亿元,亿元,13.02,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,72,上海外国语大学,12.88亿元,亿元,12.88,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,73,华北电力大学（保定）,10.17亿元,亿元,10.17,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,74,中央美术学院,9.14亿元,亿元,9.14,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,75,中央音乐学院,7.11亿元,亿元,7.11,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2020,76,中央戏剧学院,4.23亿元,亿元,4.23,2020预算.jpg,https://www.eol.cn/shuju/uni/202108/t20210805_2143174.shtml,paddleocr_strip,False,
+2021,1,清华大学,317.28亿元,亿元,317.28,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,2,浙江大学,228.16亿元,亿元,228.16,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,3,北京大学,221.34亿元,亿元,221.34,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,4,中山大学,198.55亿元,亿元,198.55,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,5,上海交通大学,175.65亿元,亿元,175.65,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,6,复旦大学,141.62亿元,亿元,141.62,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,7,山东大学,118.08亿元,亿元,118.08,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,8,华中科技大学,116.33亿元,亿元,116.33,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,9,西安交通大学,114.68亿元,亿元,114.68,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,10,东南大学,113.92亿元,亿元,113.92,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,11,同济大学,107.04亿元,亿元,107.04,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,12,武汉大学,106.44亿元,亿元,106.44,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,13,四川大学,101.76亿元,亿元,101.76,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,14,吉林大学,98.36亿元,亿元,98.36,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,15,北京师范大学,87.85亿元,亿元,87.85,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,16,中南大学,87.70亿元,亿元,87.70,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,17,厦门大学,86.81亿元,亿元,86.81,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,18,南京大学,86.39亿元,亿元,86.39,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,19,华南理工大学,83.18亿元,亿元,83.18,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,20,中国人民大学,78.06亿元,亿元,78.06,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,21,天津大学,76.01亿元,亿元,76.01,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,22,大连理工大学,72.16亿元,亿元,72.16,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,23,电子科技大学,71.48亿元,亿元,71.48,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,24,重庆大学,67.21亿元,亿元,67.21,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,25,华东师范大学,65.17亿元,亿元,65.17,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,26,武汉理工大学,60.94亿元,亿元,60.94,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,27,中国农业大学,60.05亿元,亿元,60.05,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,28,湖南大学,58.44亿元,亿元,58.44,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,29,南开大学,57.74亿元,亿元,57.74,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,30,北京交通大学,55.93亿元,亿元,55.93,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,31,北京科技大学,54.53亿元,亿元,54.53,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,32,东北大学,54.49亿元,亿元,54.49,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,33,西安电子科技大学,51.78亿元,亿元,51.78,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,34,西南交通大学,51.42亿元,亿元,51.42,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,35,兰州大学,49.84亿元,亿元,49.84,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,36,西南大学,49.08亿元,亿元,49.08,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,37,河海大学,47.31亿元,亿元,47.31,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,38,中国石油大学（华东）,45.90亿元,亿元,45.90,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,39,西北农林科技大学,45.55亿元,亿元,45.55,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,40,中国海洋大学,45.13亿元,亿元,45.13,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,41,中国石油大学（北京）,43.07亿元,亿元,43.07,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,42,中国矿业大学,41.34亿元,亿元,41.34,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,43,中国地质大学（武汉）,41.15亿元,亿元,41.15,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,44,北京邮电大学,39.14亿元,亿元,39.14,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,45,华东理工大学,37.39亿元,亿元,37.39,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,46,华中农业大学,37.30亿元,亿元,37.30,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,47,华北电力大学,37.15亿元,亿元,37.15,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,48,江南大学,36.48亿元,亿元,36.48,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,49,合肥工业大学,36.18亿元,亿元,36.18,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,50,长安大学,35.71亿元,亿元,35.71,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,51,华中师范大学,34.06亿元,亿元,34.06,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,52,南京农业大学,33.05亿元,亿元,33.05,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,53,陕西师范大学,31.87亿元,亿元,31.87,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,54,北京化工大学,29.34亿元,亿元,29.34,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,55,东北师范大学,28.73亿元,亿元,28.73,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,56,北京中医药大学,28.35亿元,亿元,28.35,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,57,东华大学,27.60亿元,亿元,27.60,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,58,中国药科大学,26.48亿元,亿元,26.48,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,59,中国传媒大学,25.35亿元,亿元,25.35,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,60,中国地质大学（北京）,24.97亿元,亿元,24.97,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,61,中国矿业大学（北京）,23.02亿元,亿元,23.02,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,62,北京林业大学,22.29亿元,亿元,22.29,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,63,中南财经政法大学,21.01亿元,亿元,21.01,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,64,中央财经大学,20.51亿元,亿元,20.51,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,65,西南财经大学,19.98亿元,亿元,19.98,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,66,上海财经大学,19.89亿元,亿元,19.89,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,67,中国政法大学,18.78亿元,亿元,18.78,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,68,东北林业大学,18.21亿元,亿元,18.21,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,69,对外经济贸易大学,17.55亿元,亿元,17.55,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,70,上海外国语大学,15.28亿元,亿元,15.28,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,71,北京外国语大学,13.99亿元,亿元,13.99,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,72,北京语言大学,11.69亿元,亿元,11.69,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2021,73,中央美术学院,8.99亿元,亿元,8.99,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,OCR行内混入中央音乐学院; 按上下文拆分
+2021,74,中央音乐学院,6.70亿元,亿元,6.70,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,OCR上一行混排; 按上下文拆分
+2021,75,中央戏剧学院,3.94亿元,亿元,3.94,2021.png,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_row,False,
+2022,2,浙江大学,261.03亿元,亿元,261.03,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,3,北京大学,219.29亿元,亿元,219.29,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,4,上海交通大学,204.2亿元,亿元,204.2,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,5,中山大学,193.05亿元,亿元,193.05,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,6,复旦大学,171.55亿元,亿元,171.55,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,10,西安交通大学,133.72亿元,亿元,133.72,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,11,山东大学,130.65亿元,亿元,130.65,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,12,华中科技大学,129.84亿元,亿元,129.84,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,13,同济大学,119.51亿元,亿元,119.51,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,14,东南大学,119.03亿元,亿元,119.03,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,15,武汉大学,118.93亿元,亿元,118.93,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,17,四川大学,110.12亿元,亿元,110.12,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,18,厦门大学,107.1亿元,亿元,107.1,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,20,吉林大学,103.93亿元,亿元,103.93,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,21,北京师范大学,98.97亿元,亿元,98.97,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,22,中南大学,96.0亿元,亿元,96.0,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,23,南京大学,93.47亿元,亿元,93.47,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,24,华南理工大学,92.2亿元,亿元,92.2,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,25,天津大学,84.55亿元,亿元,84.55,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,26,大连理工大学,82.25亿元,亿元,82.25,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,27,中国人民大学,79.99亿元,亿元,79.99,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,28,重庆大学,75.47亿元,亿元,75.47,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,29,电子科技大学,72.86亿元,亿元,72.86,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,32,华东师范大学,67.35亿元,亿元,67.35,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,33,武汉理工大学,65.84亿元,亿元,65.84,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,34,湖南大学,64.17亿元,亿元,64.17,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,36,中国农业大学,63.47亿元,亿元,63.47,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,37,东北大学,62.04亿元,亿元,62.04,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,38,西安电子科技大学,60.56亿元,亿元,60.56,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,39,南开大学,60.52亿元,亿元,60.52,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,40,北京交通大学,57.79亿元,亿元,57.79,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,42,兰州大学,55.17亿元,亿元,55.17,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,43,中国海洋大学,55.08亿元,亿元,55.08,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,45,北京科技大学,54.79亿元,亿元,54.79,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,46,西南交通大学,54.46亿元,亿元,54.46,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,47,西南大学,51.32亿元,亿元,51.32,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,48,河海大学,50.49亿元,亿元,50.49,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,50,中国石油大学（华东）,48.85亿元,亿元,48.85,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,51,中国地质大学（武汉）,46.41亿元,亿元,46.41,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,52,西北农林科技大学,46.4亿元,亿元,46.4,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,54,北京邮电大学,45.13亿元,亿元,45.13,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,55,江南大学,44.86亿元,亿元,44.86,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,56,中国石油大学（北京）,44.86亿元,亿元,44.86,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,57,中国矿业大学,43.62亿元,亿元,43.62,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,58,华东理工大学,42.81亿元,亿元,42.81,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,59,华中农业大学,42.29亿元,亿元,42.29,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,60,华北电力大学,41.97亿元,亿元,41.97,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,61,长安大学,41.37亿元,亿元,41.37,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,62,合肥工业大学,39.55亿元,亿元,39.55,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,67,陕西师范大学,37.36亿元,亿元,37.36,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,73,南京农业大学,33.61亿元,亿元,33.61,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,75,东华大学,33.34亿元,亿元,33.34,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,77,北京中医药大学,32.61亿元,亿元,32.61,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,78,北京化工大学,32.3亿元,亿元,32.3,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,87,东北师范大学,29.89亿元,亿元,29.89,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,88,中国药科大学,28.46亿元,亿元,28.46,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,89,中国地质大学（北京）,27.63亿元,亿元,27.63,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,90,中国传媒大学,26.73亿元,亿元,26.73,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2022,96,北京林业大学,24.66亿元,亿元,24.66,2022.jpg,https://m.mp.oeeee.com/a/BAAFRD000020210414468623.html,paddleocr_strip,False,主管部门=教育部
+2023,1,清华大学,410.93亿元,亿元,410.93,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,2,浙江大学,309.01亿元,亿元,309.01,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,3,上海交通大学,265.16亿元,亿元,265.16,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,4,北京大学,222.47亿元,亿元,222.47,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,5,中山大学,197.14亿元,亿元,197.14,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,6,复旦大学,178.69亿元,亿元,178.69,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,7,山东大学,166.58亿元,亿元,166.58,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,8,同济大学,152.04亿元,亿元,152.04,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,9,武汉大学,151.36亿元,亿元,151.36,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,10,西安交通大学,146.29亿元,亿元,146.29,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,11,东南大学,145.49亿元,亿元,145.49,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,12,华中科技大学,137.37亿元,亿元,137.37,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,13,华南理工大学,125.26亿元,亿元,125.26,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,14,四川大学,124.01亿元,亿元,124.01,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,15,中南大学,120.00亿元,亿元,120.00,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,16,北京师范大学,115.69亿元,亿元,115.69,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,17,厦门大学,113.17亿元,亿元,113.17,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,18,大连理工大学,106.13亿元,亿元,106.13,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,19,吉林大学,104.72亿元,亿元,104.72,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,20,中国人民大学,104.48亿元,亿元,104.48,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,21,南京大学,97.49亿元,亿元,97.49,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,22,天津大学,91.95亿元,亿元,91.95,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,23,电子科技大学,87.87亿元,亿元,87.87,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,24,重庆大学,84.54亿元,亿元,84.54,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,25,湖南大学,79.33亿元,亿元,79.33,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,26,兰州大学,77.88亿元,亿元,77.88,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,27,华东师范大学,76.35亿元,亿元,76.35,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,29,南开大学,70.72亿元,亿元,70.72,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,30,西安电子科技大学,68.25亿元,亿元,68.25,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,31,中国农业大学,67.07亿元,亿元,67.07,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,32,东北大学,66.06亿元,亿元,66.06,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,33,西南交通大学,65.17亿元,亿元,65.17,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,34,北京科技大学,64.60亿元,亿元,64.60,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,35,北京交通大学,61.40亿元,亿元,61.40,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,36,北京邮电大学,59.22亿元,亿元,59.22,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,37,中国石油大学（北京）,56.59亿元,亿元,56.59,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,38,西南大学,55.73亿元,亿元,55.73,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,39,河海大学,55.31亿元,亿元,55.31,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,40,中国海洋大学,53.86亿元,亿元,53.86,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,41,中国地质大学（武汉）,52.74亿元,亿元,52.74,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,42,长安大学,49.34亿元,亿元,49.34,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,43,中国石油大学（华东）,49.07亿元,亿元,49.07,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,44,西北农林科技大学,48.91亿元,亿元,48.91,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,45,中国矿业大学,48.79亿元,亿元,48.79,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,46,华北电力大学,48.51亿元,亿元,48.51,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,47,华中农业大学,47.82亿元,亿元,47.82,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,48,江南大学,45.94亿元,亿元,45.94,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,49,合肥工业大学,45.91亿元,亿元,45.91,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,50,华东理工大学,45.76亿元,亿元,45.76,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,51,华中师范大学,39.06亿元,亿元,39.06,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,52,陕西师范大学,37.61亿元,亿元,37.61,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,53,北京化工大学,37.41亿元,亿元,37.41,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,54,东华大学,36.93亿元,亿元,36.93,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,55,南京农业大学,33.85亿元,亿元,33.85,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,56,北京中医药大学,33.15亿元,亿元,33.15,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,57,东北师范大学,30.99亿元,亿元,30.99,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,58,中国地质大学（北京）,29.85亿元,亿元,29.85,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,59,中国药科大学,29.23亿元,亿元,29.23,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,60,中国传媒大学,28.48亿元,亿元,28.48,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,61,中央财经大学,26.94亿元,亿元,26.94,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,62,中南财经政法大学,26.78亿元,亿元,26.78,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,63,中国矿业大学（北京）,23.37亿元,亿元,23.37,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,64,北京林业大学,23.37亿元,亿元,23.37,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,65,西南财经大学,22.93亿元,亿元,22.93,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,66,上海财经大学,21.93亿元,亿元,21.93,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,67,东北林业大学,21.07亿元,亿元,21.07,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,68,中国政法大学,19.88亿元,亿元,19.88,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,69,对外经济贸易大学,19.88亿元,亿元,19.88,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,70,上海外国语大学,17.41亿元,亿元,17.41,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,71,北京外国语大学,14.30亿元,亿元,14.30,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,72,中央美术学院,12.54亿元,亿元,12.54,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,73,北京语言大学,11.64亿元,亿元,11.64,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,74,中央音乐学院,8.22亿元,亿元,8.22,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2023,75,中央戏剧学院,4.15亿元,亿元,4.15,2023.webp,https://cacsc.com.cn/2024/2023年教育部直属高校预算汇总.html?utm_source=chatgpt.com,paddleocr_strip,False,
+2024,1,清华大学,385.69亿元,亿元,385.69,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,2,浙江大学,328.61亿元,亿元,328.61,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,3,上海交通大学,281.58亿元,亿元,281.58,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,4,北京大学,243.30亿元,亿元,243.30,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,5,复旦大学,182.26亿元,亿元,182.26,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,6,中山大学,178.39亿元,亿元,178.39,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,7,同济大学,161.31亿元,亿元,161.31,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,8,西安交通大学,160.98亿元,亿元,160.98,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,9,东南大学,160.70亿元,亿元,160.70,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,10,武汉大学,141.20亿元,亿元,141.20,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,11,山东大学,139.71亿元,亿元,139.71,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,12,华中科技大学,137.70亿元,亿元,137.70,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,13,南京大学,121.41亿元,亿元,121.41,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,14,华南理工大学,120.39亿元,亿元,120.39,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,15,四川大学,120.29亿元,亿元,120.29,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,16,厦门大学,117.24亿元,亿元,117.24,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,17,北京师范大学,116.06亿元,亿元,116.06,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,18,中南大学,108.39亿元,亿元,108.39,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,19,吉林大学,102.12亿元,亿元,102.12,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,20,大连理工大学,100.17亿元,亿元,100.17,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,21,中国人民大学,68.66亿元,亿元,68.66,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,22,湖南大学,97.84亿元,亿元,97.84,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,23,天津大学,92.25亿元,亿元,92.25,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,24,重庆大学,87.14亿元,亿元,87.14,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,25,中国农业大学,83.40亿元,亿元,83.40,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,26,电子科技大学,80.57亿元,亿元,80.57,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,27,武汉理工大学,77.12亿元,亿元,77.12,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,28,西安电子科技大学,76.90亿元,亿元,76.90,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,29,东北大学,74.34亿元,亿元,74.34,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,30,华东师范大学,74.20亿元,亿元,74.20,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,31,北京科技大学,72.83亿元,亿元,72.83,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,32,西南交通大学,66.52亿元,亿元,66.52,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,33,北京交通大学,66.35亿元,亿元,66.35,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,34,兰州大学,66.21亿元,亿元,66.21,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,35,南开大学,64.03亿元,亿元,64.03,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,36,中国海洋大学,61.56亿元,亿元,61.56,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,37,北京邮电大学,60.97亿元,亿元,60.97,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,38,西北农林科技大学,60.10亿元,亿元,60.10,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,39,西南大学,58.23亿元,亿元,58.23,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,40,中国石油大学（北京）,55.85亿元,亿元,55.85,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,41,中国地质大学（武汉）,55.49亿元,亿元,55.49,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,42,华北电力大学,52.47亿元,亿元,52.47,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,43,中国矿业大学,51.02亿元,亿元,51.02,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,44,中国石油大学（华东）,50.12亿元,亿元,50.12,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,45,江南大学,49.47亿元,亿元,49.47,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,46,河海大学,49.20亿元,亿元,49.20,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,47,华中农业大学,48.85亿元,亿元,48.85,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,48,合肥工业大学,48.69亿元,亿元,48.69,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,49,长安大学,48.06亿元,亿元,48.06,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,50,华东理工大学,46.91亿元,亿元,46.91,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,51,北京化工大学,39.78亿元,亿元,39.78,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,52,华中师范大学,39.73亿元,亿元,39.73,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,53,东华大学,37.35亿元,亿元,37.35,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,54,中国地质大学（北京）,36.01亿元,亿元,36.01,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,55,陕西师范大学,35.88亿元,亿元,35.88,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,56,南京农业大学,35.77亿元,亿元,35.77,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,57,北京中医药大学,34.81亿元,亿元,34.81,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,58,中国药科大学,33.48亿元,亿元,33.48,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,59,东北师范大学,66.00亿元,亿元,66.00,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,60,中国传媒大学,28.81亿元,亿元,28.81,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,61,中南财经政法大学,26.44亿元,亿元,26.44,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,62,北京林业大学,25.59亿元,亿元,25.59,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,63,上海财经大学,25.44亿元,亿元,25.44,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,64,中央财经大学,25.28亿元,亿元,25.28,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,65,中国矿业大学（北京）,25.26亿元,亿元,25.26,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,66,西南财经大学,23.15亿元,亿元,23.15,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,67,中国政法大学,20.71亿元,亿元,20.71,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,68,东北林业大学,20.45亿元,亿元,20.45,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,69,对外经济贸易大学,20.09亿元,亿元,20.09,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,70,北京外国语大学,17.18亿元,亿元,17.18,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,71,上海外国语大学,16.37亿元,亿元,16.37,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,72,中央美术学院,12.90亿元,亿元,12.90,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,73,北京语言大学,12.21亿元,亿元,12.21,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,74,中央音乐学院,10.88亿元,亿元,10.88,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2024,75,中央戏剧学院,4.23亿元,亿元,4.23,2024.png,https://zhuanlan.zhihu.com/p/693822580,paddleocr_row,False,
+2025,1,清华大学,395.18亿元,亿元,395.18,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,2,浙江大学,352.31亿元,亿元,352.31,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,3,上海交通大学,294.48亿元,亿元,294.48,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,4,北京大学,259.14亿元,亿元,259.14,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,6,中山大学,216.22亿元,亿元,216.22,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,7,复旦大学,182.95亿元,亿元,182.95,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,8,同济大学,174.98亿元,亿元,174.98,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,9,西安交通大学,107.25亿元,亿元,107.25,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,11,东南大学,162.85亿元,亿元,162.85,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,12,山东大学,161.96亿元,亿元,161.96,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,13,武汉大学,145.51亿元,亿元,145.51,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,14,华中科技大学,45.36亿元,亿元,45.36,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,高排名金额偏低，疑似OCR缺位，需人工复核; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,16,厦门大学,128.59亿元,亿元,128.59,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,18,南京大学,127.18亿元,亿元,127.18,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,19,华南理工大学,126.50亿元,亿元,126.50,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,20,四川大学,124.98亿元,亿元,124.98,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,23,大连理工大学,106.80亿元,亿元,106.80,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,24,重庆大学,106.27亿元,亿元,106.27,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,25,天津大学,106.23亿元,亿元,106.23,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,26,吉林大学,104.32亿元,亿元,104.32,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,27,湖南大学,103.63亿元,亿元,103.63,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,28,中国农业大学,100.47亿元,亿元,100.47,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,29,电子科技大学,63.90亿元,亿元,63.90,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,30,中国人民大学,91.73亿元,亿元,91.73,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,33,西安电子科技大学,85.46亿元,亿元,85.46,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,34,西南交通大学,84.62亿元,亿元,84.62,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,35,西北农林科技大学,83.68亿元,亿元,83.68,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,36,华东师范大学,82.29亿元,亿元,82.29,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,37,武汉理工大学,81.99亿元,亿元,81.99,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,40,兰州大学,78.37亿元,亿元,78.37,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,41,北京科技大学,78.31亿元,亿元,78.31,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,42,北京交通大学,71.83亿元,亿元,71.83,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,43,中国石油大学（北京）,36.05亿元,亿元,36.05,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,44,南开大学,66.78亿元,亿元,66.78,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,46,合肥工业大学,66.13亿元,亿元,66.13,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,47,西南大学,64.20亿元,亿元,64.20,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,48,中国矿业大学,63.86亿元,亿元,63.86,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,49,中国海洋大学,38.00亿元,亿元,38.00,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,50,北京邮电大学,63.20亿元,亿元,63.20,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,51,河海大学,60.78亿元,亿元,60.78,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,52,华中农业大学,58.19亿元,亿元,58.19,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,53,华北电力大学,57.84亿元,亿元,57.84,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,rank OCR疑似为29，按行序校正为53; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,54,中国地质大学（武汉）,33.00亿元,亿元,33.00,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,rank OCR疑似为9，按行序校正为54; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,55,华东理工大学,54.93亿元,亿元,54.93,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,56,江南大学,52.99亿元,亿元,52.99,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,57,南京农业大学,52.46亿元,亿元,52.46,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,58,长安大学,48.44亿元,亿元,48.44,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,59,中国石油大学（华东）,47.71亿元,亿元,47.71,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,60,北京中医药大学,46.48亿元,亿元,46.48,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,61,华中师范大学,43.74亿元,亿元,43.74,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,62,北京化工大学,42.70亿元,亿元,42.70,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,63,北京林业大学,42.40亿元,亿元,42.40,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,64,中国地质大学（北京）,40.13亿元,亿元,40.13,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,65,中国药科大学,39.48亿元,亿元,39.48,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,66,东华大学,38.54亿元,亿元,38.54,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,67,陕西师范大学,37.21亿元,亿元,37.21,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,68,东北师范大学,33.06亿元,亿元,33.06,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,69,中国传媒大学,29.98亿元,亿元,29.98,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,70,中国矿业大学（北京）,29.82亿元,亿元,29.82,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,71,中央财经大学,28.26亿元,亿元,28.26,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,72,上海财经大学,27.00亿元,亿元,27.00,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,74,中南财经政法大学,25.24亿元,亿元,25.24,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,75,西南财经大学,23.77亿元,亿元,23.77,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,76,中国政法大学,21.32亿元,亿元,21.32,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,77,对外经济贸易大学,19.00亿元,亿元,19.00,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,78,北京外国语大学,17.44亿元,亿元,17.44,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,79,上海外国语大学,16.49亿元,亿元,16.49,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,80,北京语言大学,12.87亿元,亿元,12.87,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,81,中央美术学院,12.28亿元,亿元,12.28,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2025,82,中央音乐学院,9.29亿元,亿元,9.29,2025.webp,https://news.qq.com/rain/a/20250418A08R7100,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,1,清华大学,403.93亿元,亿元,403.93,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,2,浙江大学,382.46亿元,亿元,382.46,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,3,上海交通大学,304.11亿元,亿元,304.11,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,4,北京大学,280.49亿元,亿元,280.49,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,6,中山大学,213.85亿元,亿元,213.85,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,7,复旦大学,62.66亿元,亿元,62.66,2026.png,,paddleocr_row,False,高排名金额偏低，疑似OCR缺位，需人工复核; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,8,西安交通大学,185.56亿元,亿元,185.56,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,9,同济大学,171.63亿元,亿元,171.63,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,12,东南大学,167.91亿元,亿元,167.91,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,13,山东大学,165.76亿元,亿元,165.76,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,15,华中科技大学,157.82亿元,亿元,157.82,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,16,北京科技大学,149.04亿元,亿元,149.04,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,17,南京大学,146.67亿元,亿元,146.67,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,18,武汉大学,93.22亿元,亿元,93.22,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,19,厦门大学,96.79亿元,亿元,96.79,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,20,北京交通大学,96.21亿元,亿元,96.21,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,23,华南理工大学,129.52亿元,亿元,129.52,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,24,四川大学,129.25亿元,亿元,129.25,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,25,中南大学,121.38亿元,亿元,121.38,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,26,重庆大学,117.71亿元,亿元,117.71,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,27,天津大学,114.59亿元,亿元,114.59,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,28,吉林大学,113.21亿元,亿元,113.21,2026.png,,paddleocr_row,False,rank OCR疑似为14，按行序校正为28; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,29,大连理工大学,112.77亿元,亿元,112.77,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,30,湖南大学,108.05亿元,亿元,108.05,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,31,中国农业大学,102.19亿元,亿元,102.19,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,32,电子科技大学,97.53亿元,亿元,97.53,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,36,西安电子科技大学,94.91亿元,亿元,94.91,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,37,西南交通大学,94.36亿元,亿元,94.36,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,38,中国人民大学,93.79亿元,亿元,93.79,2026.png,,paddleocr_row,False,rank OCR疑似为89，按行序校正为38; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,39,西北农林科技大学,66.26亿元,亿元,66.26,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,41,华东师范大学,87.42亿元,亿元,87.42,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,42,武汉理工大学,84.29亿元,亿元,84.29,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,43,兰州大学,81.45亿元,亿元,81.45,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,44,北京林业大学,78.20亿元,亿元,78.20,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,45,南开大学,74.28亿元,亿元,74.28,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,46,合肥工业大学,73.63亿元,亿元,73.63,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,48,中国矿业大学,66.95亿元,亿元,66.95,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,49,北京邮电大学,64.91亿元,亿元,64.91,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,50,中国石油大学（北京）,64.73亿元,亿元,64.73,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,51,河海大学,63.50亿元,亿元,63.50,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,52,中国海洋大学,62.98亿元,亿元,62.98,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,53,西南大学,62.52亿元,亿元,62.52,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,54,华北电力大学,62.24亿元,亿元,62.24,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,55,南京农业大学,62.19亿元,亿元,62.19,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,56,江南大学,61.73亿元,亿元,61.73,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,57,华东理工大学,60.71亿元,亿元,60.71,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,58,华中农业大学,60.47亿元,亿元,60.47,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,60,中国地质大学（武汉）,58.54亿元,亿元,58.54,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,61,长安大学,54.46亿元,亿元,54.46,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,62,华中师范大学,52.67亿元,亿元,52.67,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,64,北京化工大学,45.66亿元,亿元,45.66,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,65,中国药科大学,44.95亿元,亿元,44.95,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,66,北京中医药大学,41.26亿元,亿元,41.26,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,67,东华大学,40.87亿元,亿元,40.87,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,68,陕西师范大学,40.77亿元,亿元,40.77,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,69,东北师范大学,34.81亿元,亿元,34.81,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,70,中国矿业大学（北京）,34.61亿元,亿元,34.61,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,71,中央财经大学,31.16亿元,亿元,31.16,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,72,中国传媒大学,29.22亿元,亿元,29.22,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,73,东北林业大学,28.14亿元,亿元,28.14,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,74,上海财经大学,26.47亿元,亿元,26.47,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,75,中南财经政法大学,24.34亿元,亿元,24.34,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,76,西南财经大学,24.10亿元,亿元,24.10,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,77,北京外国语大学,21.13亿元,亿元,21.13,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,78,中国政法大学,16.61亿元,亿元,16.61,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,79,对外经济贸易大学,18.20亿元,亿元,18.20,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,80,上海外国语大学,17.80亿元,亿元,17.80,2026.png,,paddleocr_row,False,rank OCR疑似为1，按行序校正为80; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,81,北京语言大学,16.78亿元,亿元,16.78,2026.png,,paddleocr_row,False,原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,82,中央美术学院,11.70亿元,亿元,11.70,2026.png,,paddleocr_row,False,rank OCR疑似为2，按行序校正为82; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
+2026,83,中央音乐学院,8.73亿元,亿元,8.73,2026.png,,paddleocr_row,False,rank OCR疑似为28，按行序校正为83; 原图含教育部、工信部、中科院; 已按名称排除工信部/中科院高校
