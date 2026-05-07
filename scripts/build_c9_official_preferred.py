@@ -34,6 +34,18 @@ C9 = [
     "西安交通大学",
 ]
 
+C9_EN = {
+    "北京大学": "Peking University",
+    "清华大学": "Tsinghua University",
+    "浙江大学": "Zhejiang University",
+    "上海交通大学": "Shanghai Jiao Tong University",
+    "复旦大学": "Fudan University",
+    "南京大学": "Nanjing University",
+    "中国科学技术大学": "University of Science and Technology of China",
+    "哈尔滨工业大学": "Harbin Institute of Technology",
+    "西安交通大学": "Xi'an Jiaotong University",
+}
+
 YEAR_MIN = 2013
 YEAR_MAX = 2026
 
@@ -47,7 +59,21 @@ METRIC_PRIORITY = [
 
 
 def c9_palette() -> dict[str, tuple[float, float, float]]:
-    return dict(zip(C9, sns.color_palette("tab10", n_colors=len(C9))))
+    return dict(zip(c9_plot_order(), sns.color_palette("tab10", n_colors=len(C9))))
+
+
+def c9_plot_order() -> list[str]:
+    return [C9_EN[university] for university in C9]
+
+
+def with_plot_labels(data: pd.DataFrame) -> pd.DataFrame:
+    plot_data = data.copy()
+    plot_data["university_label"] = plot_data["university"].map(C9_EN).fillna(plot_data["university"])
+    return plot_data
+
+
+def set_plot_theme() -> None:
+    sns.set_theme(style="whitegrid", font="DejaVu Sans")
 
 
 def savefig_with_watermark(path: Path, dpi: int = 220, center_fontsize: int = 46, center_alpha: float = 0.12) -> None:
@@ -154,28 +180,29 @@ def build_fallback_rows(existing_keys: set[tuple[str, int]]) -> pd.DataFrame:
 
 
 def plot_trend(data: pd.DataFrame, path: Path) -> None:
-    sns.set_theme(style="whitegrid", font="Arial Unicode MS")
+    set_plot_theme()
     palette = c9_palette()
+    plot_data = with_plot_labels(data)
     plt.figure(figsize=(14, 7.5))
     ax = sns.lineplot(
-        data=data,
+        data=plot_data,
         x="year",
         y="budget_yi_yuan",
-        hue="university",
-        hue_order=C9,
+        hue="university_label",
+        hue_order=c9_plot_order(),
         palette=palette,
         marker="o",
         linewidth=1.8,
     )
 
-    fallback = data[data["source_type"].eq("third_party_ocr_fallback")]
+    fallback = plot_data[plot_data["source_type"].eq("third_party_ocr_fallback")]
     if not fallback.empty:
         sns.scatterplot(
             data=fallback,
             x="year",
             y="budget_yi_yuan",
-            hue="university",
-            hue_order=C9,
+            hue="university_label",
+            hue_order=c9_plot_order(),
             palette=palette,
             marker="X",
             s=90,
@@ -185,15 +212,15 @@ def plot_trend(data: pd.DataFrame, path: Path) -> None:
             linewidth=0.8,
         )
 
-    ax.set_title("C9高校年度预算变化（官方优先）")
-    ax.set_xlabel("年份")
-    ax.set_ylabel("经费（亿元）")
+    ax.set_title("C9 University Annual Budget Trend (Official Sources Preferred)")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Budget (100M CNY)")
     ax.set_xticks(sorted(data["year"].unique()))
-    ax.legend(title="高校", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
+    ax.legend(title="University", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
     ax.text(
         0.01,
         0.02,
-        "圆点/折线：官方PDF/HTML优先；X 标记：旧第三方OCR回退",
+        "Lines/points prefer official PDF/HTML values; X markers indicate third-party OCR fallback.",
         transform=ax.transAxes,
         fontsize=9,
         color="#475569",
@@ -209,27 +236,28 @@ def plot_growth(data: pd.DataFrame, path: Path) -> pd.DataFrame:
     growth["growth_percent"] = growth["growth_rate"] * 100
     growth = growth.dropna(subset=["growth_percent"])
 
-    sns.set_theme(style="whitegrid", font="Arial Unicode MS")
+    set_plot_theme()
     palette = c9_palette()
+    plot_growth_data = with_plot_labels(growth)
     plt.figure(figsize=(14, 7.5))
     ax = sns.lineplot(
-        data=growth,
+        data=plot_growth_data,
         x="year",
         y="growth_percent",
-        hue="university",
-        hue_order=C9,
+        hue="university_label",
+        hue_order=c9_plot_order(),
         palette=palette,
         marker="o",
         linewidth=1.8,
     )
-    fallback = growth[growth["source_type"].eq("third_party_ocr_fallback")]
+    fallback = plot_growth_data[plot_growth_data["source_type"].eq("third_party_ocr_fallback")]
     if not fallback.empty:
         sns.scatterplot(
             data=fallback,
             x="year",
             y="growth_percent",
-            hue="university",
-            hue_order=C9,
+            hue="university_label",
+            hue_order=c9_plot_order(),
             palette=palette,
             marker="X",
             s=90,
@@ -237,18 +265,18 @@ def plot_growth(data: pd.DataFrame, path: Path) -> pd.DataFrame:
             ax=ax,
             edgecolor="white",
             linewidth=0.8,
-        )
+    )
 
     ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
-    ax.set_title("C9高校年度预算同比增速（官方优先）")
-    ax.set_xlabel("年份")
-    ax.set_ylabel("同比增速（%）")
+    ax.set_title("C9 University Budget Year-over-Year Growth (Official Sources Preferred)")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("YoY Growth (%)")
     ax.set_xticks(sorted(growth["year"].unique()))
-    ax.legend(title="高校", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
+    ax.legend(title="University", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
     ax.text(
         0.01,
         0.02,
-        "圆点/折线：官方PDF/HTML优先；X 标记：当年值来自旧第三方OCR回退",
+        "Lines/points prefer official PDF/HTML values; X markers indicate third-party OCR fallback.",
         transform=ax.transAxes,
         fontsize=9,
         color="#475569",
@@ -260,27 +288,28 @@ def plot_growth(data: pd.DataFrame, path: Path) -> pd.DataFrame:
 
 
 def plot_growth_symlog(growth: pd.DataFrame, path: Path) -> None:
-    sns.set_theme(style="whitegrid", font="Arial Unicode MS")
+    set_plot_theme()
     palette = c9_palette()
+    plot_growth_data = with_plot_labels(growth)
     plt.figure(figsize=(14, 7.5))
     ax = sns.lineplot(
-        data=growth,
+        data=plot_growth_data,
         x="year",
         y="growth_percent",
-        hue="university",
-        hue_order=C9,
+        hue="university_label",
+        hue_order=c9_plot_order(),
         palette=palette,
         marker="o",
         linewidth=1.8,
     )
-    fallback = growth[growth["source_type"].eq("third_party_ocr_fallback")]
+    fallback = plot_growth_data[plot_growth_data["source_type"].eq("third_party_ocr_fallback")]
     if not fallback.empty:
         sns.scatterplot(
             data=fallback,
             x="year",
             y="growth_percent",
-            hue="university",
-            hue_order=C9,
+            hue="university_label",
+            hue_order=c9_plot_order(),
             palette=palette,
             marker="X",
             s=90,
@@ -292,15 +321,15 @@ def plot_growth_symlog(growth: pd.DataFrame, path: Path) -> None:
 
     format_symlog_growth_axis(ax)
     ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
-    ax.set_title("C9高校年度预算同比增速（对称对数坐标，官方优先）")
-    ax.set_xlabel("年份")
-    ax.set_ylabel("同比增速（%，symlog）")
+    ax.set_title("C9 University Budget YoY Growth (Symlog, Official Sources Preferred)")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("YoY Growth (%, symlog)")
     ax.set_xticks(sorted(growth["year"].unique()))
-    ax.legend(title="高校", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
+    ax.legend(title="University", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
     ax.text(
         0.01,
         0.02,
-        "symlog 保留负增长；-5% 到 5% 附近线性显示；X 标记：旧第三方OCR回退",
+        "Symlog preserves negative growth; -5% to 5% is linear; X markers indicate third-party OCR fallback.",
         transform=ax.transAxes,
         fontsize=9,
         color="#475569",
@@ -311,8 +340,10 @@ def plot_growth_symlog(growth: pd.DataFrame, path: Path) -> None:
 
 
 def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
-    sns.set_theme(style="whitegrid", font="Arial Unicode MS")
+    set_plot_theme()
     palette = c9_palette()
+    plot_data = with_plot_labels(data)
+    plot_growth_data = with_plot_labels(growth)
     fig, axes = plt.subplots(
         2,
         1,
@@ -323,24 +354,24 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
 
     trend_ax, growth_ax = axes
     sns.lineplot(
-        data=data,
+        data=plot_data,
         x="year",
         y="budget_yi_yuan",
-        hue="university",
-        hue_order=C9,
+        hue="university_label",
+        hue_order=c9_plot_order(),
         palette=palette,
         marker="o",
         linewidth=1.8,
         ax=trend_ax,
     )
-    fallback = data[data["source_type"].eq("third_party_ocr_fallback")]
+    fallback = plot_data[plot_data["source_type"].eq("third_party_ocr_fallback")]
     if not fallback.empty:
         sns.scatterplot(
             data=fallback,
             x="year",
             y="budget_yi_yuan",
-            hue="university",
-            hue_order=C9,
+            hue="university_label",
+            hue_order=c9_plot_order(),
             palette=palette,
             marker="X",
             s=90,
@@ -349,31 +380,31 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
             edgecolor="white",
             linewidth=0.8,
         )
-    trend_ax.set_title("C9高校年度预算变化与同比增速（官方优先）")
+    trend_ax.set_title("C9 University Annual Budget Trend and Year-over-Year Growth (Official Sources Preferred)")
     trend_ax.set_xlabel("")
-    trend_ax.set_ylabel("经费（亿元）")
-    trend_ax.legend(title="高校", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
+    trend_ax.set_ylabel("Budget (100M CNY)")
+    trend_ax.legend(title="University", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
 
     sns.lineplot(
-        data=growth,
+        data=plot_growth_data,
         x="year",
         y="growth_percent",
-        hue="university",
-        hue_order=C9,
+        hue="university_label",
+        hue_order=c9_plot_order(),
         palette=palette,
         marker="o",
         linewidth=1.8,
         legend=False,
         ax=growth_ax,
     )
-    growth_fallback = growth[growth["source_type"].eq("third_party_ocr_fallback")]
+    growth_fallback = plot_growth_data[plot_growth_data["source_type"].eq("third_party_ocr_fallback")]
     if not growth_fallback.empty:
         sns.scatterplot(
             data=growth_fallback,
             x="year",
             y="growth_percent",
-            hue="university",
-            hue_order=C9,
+            hue="university_label",
+            hue_order=c9_plot_order(),
             palette=palette,
             marker="X",
             s=90,
@@ -384,13 +415,13 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
         )
     growth_ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
     format_symlog_growth_axis(growth_ax)
-    growth_ax.set_xlabel("年份")
-    growth_ax.set_ylabel("同比增速（%，symlog）")
+    growth_ax.set_xlabel("Year")
+    growth_ax.set_ylabel("YoY Growth (%, symlog)")
     growth_ax.set_xticks(sorted(data["year"].unique()))
     growth_ax.text(
         0.01,
         0.03,
-        "下图为 symlog 增速坐标；X 标记：旧第三方OCR回退",
+        "Symlog growth axis; X = third-party OCR fallback.",
         transform=growth_ax.transAxes,
         fontsize=9,
         color="#475569",
