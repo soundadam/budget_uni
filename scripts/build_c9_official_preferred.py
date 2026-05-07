@@ -244,6 +244,57 @@ def plot_growth(data: pd.DataFrame, path: Path) -> pd.DataFrame:
     return growth
 
 
+def plot_growth_symlog(growth: pd.DataFrame, path: Path) -> None:
+    sns.set_theme(style="whitegrid", font="Arial Unicode MS")
+    palette = c9_palette()
+    plt.figure(figsize=(14, 7.5))
+    ax = sns.lineplot(
+        data=growth,
+        x="year",
+        y="growth_percent",
+        hue="university",
+        hue_order=C9,
+        palette=palette,
+        marker="o",
+        linewidth=1.8,
+    )
+    fallback = growth[growth["source_type"].eq("third_party_ocr_fallback")]
+    if not fallback.empty:
+        sns.scatterplot(
+            data=fallback,
+            x="year",
+            y="growth_percent",
+            hue="university",
+            hue_order=C9,
+            palette=palette,
+            marker="X",
+            s=90,
+            legend=False,
+            ax=ax,
+            edgecolor="white",
+            linewidth=0.8,
+        )
+
+    ax.set_yscale("symlog", linthresh=5, linscale=1)
+    ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
+    ax.set_title("C9高校年度预算同比增速（对称对数坐标，官方优先）")
+    ax.set_xlabel("年份")
+    ax.set_ylabel("同比增速（%，symlog）")
+    ax.set_xticks(sorted(growth["year"].unique()))
+    ax.legend(title="高校", bbox_to_anchor=(1.02, 1), loc="upper left", borderaxespad=0, fontsize=8)
+    ax.text(
+        0.01,
+        0.02,
+        "symlog 保留负增长；-5% 到 5% 附近线性显示；X 标记：旧第三方OCR回退",
+        transform=ax.transAxes,
+        fontsize=9,
+        color="#475569",
+    )
+    plt.tight_layout()
+    savefig_with_watermark(path)
+    plt.close()
+
+
 def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
     sns.set_theme(style="whitegrid", font="Arial Unicode MS")
     palette = c9_palette()
@@ -352,6 +403,7 @@ def main() -> None:
     growth_csv_path = OUT_DIR / "c9_budget_growth_official_preferred.csv"
     growth_pivot_path = OUT_DIR / "c9_budget_growth_official_preferred_pivot.csv"
     growth_fig_path = FIG_DIR / "c9_budget_growth_official_preferred.png"
+    growth_symlog_fig_path = FIG_DIR / "c9_budget_growth_symlog_official_preferred.png"
     combined_fig_path = FIG_DIR / "c9_budget_trend_growth_official_preferred.png"
 
     combined.to_csv(csv_path, index=False, encoding="utf-8")
@@ -370,6 +422,7 @@ def main() -> None:
     )
     plot_trend(combined, fig_path)
     growth = plot_growth(combined, growth_fig_path)
+    plot_growth_symlog(growth, growth_symlog_fig_path)
     plot_combined(combined, growth, combined_fig_path)
     growth.to_csv(growth_csv_path, index=False, encoding="utf-8")
     (
@@ -387,6 +440,7 @@ def main() -> None:
     print(growth_csv_path)
     print(growth_pivot_path)
     print(growth_fig_path)
+    print(growth_symlog_fig_path)
     print(combined_fig_path)
     print(combined.groupby(["university", "source_type"]).size().to_string())
 
