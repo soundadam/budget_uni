@@ -60,6 +60,48 @@ data/processed/macro_fiscal_indicators.csv
 data/processed/university_dimensions.csv
 ```
 
+## C9 官方优先分析表
+
+官方优先 C9 趋势表：
+
+```text
+data/processed/c9_budget_official_preferred.csv
+data/processed/c9_budget_growth_official_preferred.csv
+data/processed/c9_budget_cagr_official_preferred.csv
+```
+
+`c9_budget_official_preferred.csv` 在 C9 范围内优先使用官方 PDF/HTML 抽取值；只有官方值缺失时才回退到旧第三方 OCR 主表。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `university` | string | C9 高校名称 |
+| `year` | int | 预算年份 |
+| `budget_yi_yuan` | float | 统一换算为亿元的预算或官方优先指标值 |
+| `source_type` | string | `official_pdf`、`official_html`、`third_party_ocr_fallback` |
+| `metric_code` | string | 采用的指标代码，例如 `budget_total`、`income_total`、`legacy_budget_yi_yuan` |
+| `source_url` | string/null | 官方 URL 或旧来源 URL |
+| `notes` | string/null | 指标优先级、回退来源、口径备注 |
+
+`c9_budget_growth_official_preferred.csv` 在上表基础上追加：
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `growth_rate` | float | 同比增速小数，例如 `0.1` 表示 10% |
+| `growth_percent` | float | 同比增速百分数 |
+
+`c9_budget_cagr_official_preferred.csv` 用于长期增速概览：
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `start_year` / `end_year` | int | 该校可用序列的起止年份 |
+| `start_budget_yi_yuan` / `end_budget_yi_yuan` | float | 起止年份经费值 |
+| `n_years` | int | CAGR 年数，等于 `end_year - start_year` |
+| `observed_year_count` | int | 起止区间内实际有值的年份数 |
+| `missing_years` | string/null | 起止区间内缺失的年份 |
+| `cagr` | float | 复合年均增长率小数 |
+| `cagr_percent` | float | 复合年均增长率百分数 |
+| `source_coverage_notes` | string | 起止区间内来源类型计数 |
+
 原始官方来源登记表：
 
 ```text

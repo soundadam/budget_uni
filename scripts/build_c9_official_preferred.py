@@ -10,6 +10,7 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_DIR / "data" / "interim" / "matplotlib"))
 
 import matplotlib.pyplot as plt
+from matplotlib.ticker import SymmetricalLogLocator
 import pandas as pd
 import seaborn as sns
 
@@ -74,6 +75,20 @@ def savefig_with_watermark(path: Path, dpi: int = 220, center_fontsize: int = 46
         alpha=0.5,
     )
     plt.savefig(path, dpi=dpi)
+
+
+def format_symlog_growth_axis(ax: plt.Axes) -> None:
+    linthresh = 5
+    ax.set_yscale("symlog", linthresh=linthresh, linscale=1)
+    ax.minorticks_on()
+    ax.yaxis.set_minor_locator(
+        SymmetricalLogLocator(
+            base=10,
+            linthresh=linthresh,
+            subs=[2, 3, 4, 5, 6, 7, 8, 9],
+        )
+    )
+    ax.grid(which="minor", axis="y", color="#cbd5e1", linewidth=0.45, alpha=0.35)
 
 
 def year_as_int(series: pd.Series) -> pd.Series:
@@ -275,7 +290,7 @@ def plot_growth_symlog(growth: pd.DataFrame, path: Path) -> None:
             linewidth=0.8,
         )
 
-    ax.set_yscale("symlog", linthresh=5, linscale=1)
+    format_symlog_growth_axis(ax)
     ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
     ax.set_title("C9高校年度预算同比增速（对称对数坐标，官方优先）")
     ax.set_xlabel("年份")
@@ -368,7 +383,7 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
             linewidth=0.8,
         )
     growth_ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
-    growth_ax.set_yscale("symlog", linthresh=5, linscale=1)
+    format_symlog_growth_axis(growth_ax)
     growth_ax.set_xlabel("年份")
     growth_ax.set_ylabel("同比增速（%，symlog）")
     growth_ax.set_xticks(sorted(data["year"].unique()))
@@ -381,9 +396,48 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
         color="#475569",
     )
 
-    plt.tight_layout()
+    fig.tight_layout(rect=(0.035, 0.035, 0.88, 0.98))
     savefig_with_watermark(path, center_fontsize=38, center_alpha=0.08)
     plt.close(fig)
+
+
+def build_cagr(data: pd.DataFrame) -> pd.DataFrame:
+    rows = []
+    ordered = data.sort_values(["university", "year"])
+    for university, group in ordered.groupby("university", sort=False):
+        valid = group.dropna(subset=["budget_yi_yuan"]).sort_values("year")
+        if len(valid) < 2:
+            continue
+
+        start = valid.iloc[0]
+        end = valid.iloc[-1]
+        n_years = int(end["year"] - start["year"])
+        if n_years <= 0 or start["budget_yi_yuan"] <= 0:
+            continue
+
+        observed_years = sorted(valid["year"].astype(int).tolist())
+        expected_years = list(range(int(start["year"]), int(end["year"]) + 1))
+        missing_years = sorted(set(expected_years) - set(observed_years))
+        cagr = (end["budget_yi_yuan"] / start["budget_yi_yuan"]) ** (1 / n_years) - 1
+        source_counts = valid["source_type"].value_counts().sort_index()
+        source_summary = "; ".join(f"{source_type}={count}" for source_type, count in source_counts.items())
+        rows.append(
+            {
+                "university": university,
+                "start_year": int(start["year"]),
+                "end_year": int(end["year"]),
+                "start_budget_yi_yuan": round(float(start["budget_yi_yuan"]), 6),
+                "end_budget_yi_yuan": round(float(end["budget_yi_yuan"]), 6),
+                "n_years": n_years,
+                "observed_year_count": len(observed_years),
+                "missing_years": " ".join(str(year) for year in missing_years),
+                "cagr": cagr,
+                "cagr_percent": cagr * 100,
+                "source_coverage_notes": source_summary,
+            }
+        )
+
+    return pd.DataFrame(rows).sort_values("cagr_percent", ascending=False).reset_index(drop=True)
 
 
 def main() -> None:
@@ -403,6 +457,7 @@ def main() -> None:
     fig_path = FIG_DIR / "c9_budget_trend_official_preferred.png"
     growth_csv_path = OUT_DIR / "c9_budget_growth_official_preferred.csv"
     growth_pivot_path = OUT_DIR / "c9_budget_growth_official_preferred_pivot.csv"
+    cagr_path = OUT_DIR / "c9_budget_cagr_official_preferred.csv"
     growth_fig_path = FIG_DIR / "c9_budget_growth_official_preferred.png"
     growth_symlog_fig_path = FIG_DIR / "c9_budget_growth_symlog_official_preferred.png"
     combined_fig_path = FIG_DIR / "c9_budget_trend_growth_official_preferred.png"
@@ -433,6 +488,7 @@ def main() -> None:
         .round(2)
         .to_csv(growth_pivot_path, encoding="utf-8")
     )
+    build_cagr(combined).round({"cagr": 6, "cagr_percent": 3}).to_csv(cagr_path, index=False, encoding="utf-8")
 
     print(csv_path)
     print(pivot_path)
@@ -440,6 +496,7 @@ def main() -> None:
     print(fig_path)
     print(growth_csv_path)
     print(growth_pivot_path)
+    print(cagr_path)
     print(growth_fig_path)
     print(growth_symlog_fig_path)
     print(combined_fig_path)

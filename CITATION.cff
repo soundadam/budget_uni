@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "China University Budget Dataset"
+message: "If you use this dataset or scripts, please cite the repository and keep source URLs in derived data."
+type: dataset
+authors:
+  - name: Adam
+date-released: 2026-05-07
+license: MIT
+repository-code: "https://github.com/soundadam/budget_uni"

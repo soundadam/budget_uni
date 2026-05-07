@@ -1,10 +1,10 @@
 # Scripts
 
-Run Python scripts from the repo root with the shared dev environment active:
+Run Python scripts from the `budget_uni` repo root with the shared dev environment active:
 
 ```zsh
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/paddleocr_extract.py --image budget_uni/data/raw/images/2024.png --year 2024
+python scripts/paddleocr_extract.py --image data/raw/images/2024.png --year 2024
 ```
 
 `paddleocr_extract.py` currently saves raw OCR JSON only. The next step is to add a table-reconstruction script after inspecting OCR quality.
@@ -13,7 +13,7 @@ Analysis figures:
 
 ```zsh
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/analyze_c9_985.py
+python scripts/analyze_c9_985.py
 ```
 
 This regenerates C9/985 CSVs and figures under `data/processed/figures/`.
@@ -23,7 +23,7 @@ To watermark existing images manually:
 
 ```zsh
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/watermark_figures.py budget_uni/data/processed/figures
+python scripts/watermark_figures.py data/processed/figures
 ```
 
 ## 官方 PDF 抽取
@@ -34,7 +34,7 @@ python budget_uni/scripts/watermark_figures.py budget_uni/data/processed/figures
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/discover_download_official_pdfs.py
+python scripts/discover_download_official_pdfs.py
 ```
 
 脚本会：
@@ -49,7 +49,7 @@ python budget_uni/scripts/discover_download_official_pdfs.py
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/report_official_source_coverage.py
+python scripts/report_official_source_coverage.py
 ```
 
 输出：
@@ -62,16 +62,16 @@ python budget_uni/scripts/report_official_source_coverage.py
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/process_all_official_pdfs.py
-python budget_uni/scripts/normalize_official_source_metadata.py
-python budget_uni/scripts/process_all_official_pdfs.py
+python scripts/process_all_official_pdfs.py
+python scripts/normalize_official_source_metadata.py
+python scripts/process_all_official_pdfs.py
 ```
 
 PDF 抽取分两步：
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/official_pdf_extract.py budget_uni/data/raw/official/pdfs/bit_2026_budget.pdf \
+python scripts/official_pdf_extract.py data/raw/official/pdfs/bit_2026_budget.pdf \
   --source-url 'https://xxgk.bit.edu.cn/docs/2026-04/122c058af442403a836ae073ac2af456.pdf' \
   --university 北京理工大学 \
   --year 2026 \
@@ -89,8 +89,8 @@ python budget_uni/scripts/official_pdf_extract.py budget_uni/data/raw/official/p
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/official_tables_to_fact.py \
-  budget_uni/data/interim/official_budget_tables/bit_2026_budget_tables.csv
+python scripts/official_tables_to_fact.py \
+  data/interim/official_budget_tables/bit_2026_budget_tables.csv
 ```
 
 输出 `data/interim/official_budget_tables/{prefix}_facts.csv`。该文件仍是中间产物，进入 `processed/` 前必须复核表名、指标名和预算/决算口径。
@@ -99,7 +99,7 @@ python budget_uni/scripts/official_tables_to_fact.py \
 
 ```bash
 source /Users/adam/.venvs/dev/.venv/bin/activate
-python budget_uni/scripts/process_all_official_pdfs.py --ocr-empty-pdfs
+python scripts/process_all_official_pdfs.py --ocr-empty-pdfs
 ```
 
 默认只处理 `official_sources.csv` 中 `source_level=official_pdf` 且口径为预算/决算的 PDF。若要调试下载目录里的未登记 PDF，可追加 `--include-unregistered-pdfs`。
@@ -110,3 +110,20 @@ python budget_uni/scripts/process_all_official_pdfs.py --ocr-empty-pdfs
 - `data/interim/official_budget_tables/official_pdf_processing_inventory.csv`
 - `data/interim/official_budget_tables/official_finance_fact_candidates.csv`
 - `data/interim/official_budget_tables/official_pdf_field_catalog.csv`
+
+## 官方优先 C9 图表与 CAGR
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python scripts/build_c9_official_preferred.py
+```
+
+输出：
+
+- `data/processed/c9_budget_official_preferred.csv`
+- `data/processed/c9_budget_growth_official_preferred.csv`
+- `data/processed/c9_budget_cagr_official_preferred.csv`
+- `data/processed/figures/c9_budget_trend_growth_official_preferred.png`
+- `data/processed/figures/c9_budget_growth_symlog_official_preferred.png`
+
+增速图的 y 轴采用 symlog，并启用 minor ticks；CAGR 只作为长期概览，不替代年度同比。

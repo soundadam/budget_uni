@@ -1,0 +1,10 @@
+university,start_year,end_year,start_budget_yi_yuan,end_budget_yi_yuan,n_years,observed_year_count,missing_years,cagr,cagr_percent,source_coverage_notes
+哈尔滨工业大学,2021,2026,108.030775,258.840616,5,6,,0.190959,19.096,official_pdf=6
+复旦大学,2013,2026,43.192003,199.3865,13,13,2014,0.124862,12.486,official_pdf=12; third_party_ocr_fallback=1
+南京大学,2013,2026,35.897426,146.671711,13,14,,0.11435,11.435,official_pdf=14
+中国科学技术大学,2017,2026,53.534431,137.287685,9,10,,0.11031,11.031,official_pdf=10
+西安交通大学,2014,2026,53.491293,185.557951,12,13,,0.109217,10.922,official_pdf=12; third_party_ocr_fallback=1
+清华大学,2013,2026,113.772518,403.927363,13,14,,0.102372,10.237,official_pdf=14
+浙江大学,2014,2026,121.473694,382.460182,12,13,,0.100294,10.029,official_pdf=13
+上海交通大学,2016,2026,118.030124,304.114821,10,11,,0.09927,9.927,official_html=1; official_pdf=10
+北京大学,2016,2026,153.112749,280.492826,10,11,,0.062407,6.241,official_pdf=10; third_party_ocr_fallback=1

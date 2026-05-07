@@ -1,0 +1,28 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Regenerable extraction outputs. Keep reviewed data under data/processed.
+data/interim/*
+!data/interim/.gitkeep
+!data/interim/ocr/
+data/interim/ocr/*
+!data/interim/ocr/.gitkeep
+!data/interim/official_pdf_text/
+data/interim/official_pdf_text/*
+!data/interim/official_pdf_text/.gitkeep
+!data/interim/official_budget_tables/
+data/interim/official_budget_tables/*
+!data/interim/official_budget_tables/.gitkeep
+!data/interim/official_budget_tables/README.md
+!data/interim/official_html_budget_pages/
+data/interim/official_html_budget_pages/*
+!data/interim/official_html_budget_pages/.gitkeep
+!data/interim/source_discovery/
+data/interim/source_discovery/*
+!data/interim/source_discovery/.gitkeep
+
+# Bulky official PDFs are intended for GitHub Releases, not normal Git history.
+data/raw/official/pdfs/*
+!data/raw/official/pdfs/.gitkeep
