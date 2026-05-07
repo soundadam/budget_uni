@@ -1,5 +1,7 @@
 # 中国高校预算与决算数据
 
+[English version](README.en.md)
+
 `budget_uni` 正在整理中国高校年度财政预算、决算和相关经费数据。当前重点是爬取与核验 **教育部直属高校 2013-2026 年财政预算、决算等公开材料**，并把官网来源、第三方年度统计图、抽取脚本和已校验 CSV 放在一个便于复查和二次开发的仓库里。
 
 ![C9 official-preferred budget trend and symlog growth](data/processed/figures/c9_budget_trend_growth_official_preferred.png)
