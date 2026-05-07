@@ -96,6 +96,23 @@ PIVOT_METRICS = [
     "government_fund_budget_appropriation_income",
 ]
 
+MANUAL_REVIEW_OVERRIDES = {
+    # PyMuPDF text extraction interleaves the two sides of PKU's 2020 budget
+    # table. These values are read from the same official PDF's Table 1.
+    ("北京大学", 2020, "budget"): {
+        "fiscal_appropriation_income": 47.638123,
+        "other_income": 28.215506,
+        "current_year_income_total": 129.288162,
+        "current_year_expense_total": 142.228212,
+        "carryover_to_next_year": 48.852602,
+        "expense_total": 191.080814,
+    },
+}
+
+MANUAL_REVIEW_NOTES = {
+    ("北京大学", 2020, "budget"): "manual override from official PDF Table 1; PyMuPDF text interleaved PKU 2020 income/expense columns",
+}
+
 
 def clean_metric_name(value: str) -> str:
     text = "" if pd.isna(value) else str(value)
@@ -201,6 +218,23 @@ def build_wide(picked: pd.DataFrame, facts: pd.DataFrame) -> pd.DataFrame:
         values.loc[mask, "comparison_budget_total"] = values.loc[mask, metric]
         values.loc[mask, "comparison_metric_code"] = metric
 
+    for (institution_name, year, document_type), overrides in MANUAL_REVIEW_OVERRIDES.items():
+        mask = (
+            values["institution_name"].eq(institution_name)
+            & values["year"].astype("Int64").eq(year)
+            & values["document_type"].eq(document_type)
+        )
+        for column, amount in overrides.items():
+            values.loc[mask, column] = amount
+    values["derived_notes"] = ""
+    for (institution_name, year, document_type), note in MANUAL_REVIEW_NOTES.items():
+        mask = (
+            values["institution_name"].eq(institution_name)
+            & values["year"].astype("Int64").eq(year)
+            & values["document_type"].eq(document_type)
+        )
+        values.loc[mask, "derived_notes"] = note
+
     source = (
         facts.groupby(["institution_name", "year", "document_type"], as_index=False)
         .agg(
@@ -216,7 +250,7 @@ def build_wide(picked: pd.DataFrame, facts: pd.DataFrame) -> pd.DataFrame:
     ordered = (
         ["institution_name", "year", "document_type", "comparison_budget_total", "comparison_metric_code"]
         + VALUE_COLUMNS
-        + ["source_types", "source_urls", "source_pdfs", "metric_codes_available", "verified_any"]
+        + ["source_types", "source_urls", "source_pdfs", "metric_codes_available", "verified_any", "derived_notes"]
     )
     wide = wide[ordered].sort_values(["institution_name", "document_type", "year"]).reset_index(drop=True)
     return wide

@@ -140,6 +140,7 @@ data/processed/c9_official_finance_metric_coverage.csv
 | `source_urls` / `source_pdfs` | string | 该行使用过的来源 URL 和本地 PDF |
 | `metric_codes_available` | string | 该学校-年份-文档已有的指标代码 |
 | `verified_any` | bool | 当前候选中是否有任何人工核验标记 |
+| `derived_notes` | string/null | 派生层备注，例如已人工复核覆盖机器错位抽取值 |
 
 C9 子表和透视表：
 
