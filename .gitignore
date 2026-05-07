@@ -26,3 +26,6 @@ data/interim/source_discovery/*
 # Bulky official PDFs are intended for GitHub Releases, not normal Git history.
 data/raw/official/pdfs/*
 !data/raw/official/pdfs/.gitkeep
+
+# Local GitHub Release build outputs.
+release-assets/

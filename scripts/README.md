@@ -127,3 +127,27 @@ python scripts/build_c9_official_preferred.py
 - `data/processed/figures/c9_budget_growth_symlog_official_preferred.png`
 
 增速图的 y 轴采用 symlog，并启用 minor ticks；CAGR 只作为长期概览，不替代年度同比。
+
+## Release Assets
+
+官方 PDF 和 `data/interim/` cache 不进入 Git；发布时生成本地 Release assets：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python scripts/build_release_assets.py --date 2026-05-07
+```
+
+输出目录：
+
+```text
+release-assets/2026-05-07/
+```
+
+默认生成：
+
+- `budget_uni-raw-official-pdfs-2026-05-07.zip`
+- `budget_uni-interim-cache-2026-05-07.zip`
+- `budget_uni-release-manifest-2026-05-07.csv`
+- `sha256sums-2026-05-07.txt`
+
+`release-assets/` 已被 `.gitignore` 忽略，生成后手动上传到 GitHub Releases。
