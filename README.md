@@ -85,6 +85,15 @@ data/processed/ministry_university_financial_table.csv
 3. 对 OCR 或多模态识别结果做逐年人工校验，输出 `data/processed/ministry_university_budget.csv`。
 4. 在 `notebooks/` 里做年度总量、排名变化、同比增速和高校分组分析。
 
+官方来源补全时，预算和决算必须同步检索。可用下面的脚本检查 C9 在 2013-2026 年的预算/决算覆盖缺口：
+
+```zsh
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/report_official_source_coverage.py
+```
+
+报告输出到 `data/processed/c9_official_source_coverage_2013_2026.md`。预算、决算和主管部门汇总口径要分开入表，不能把决算值补进预算趋势。
+
 ## 官方 HTML 预算页抽取
 
 `scripts/official_html_extract.py` 读取 `data/raw/official_sources.csv`，筛选 `source_level=official_page` 且 `document_type=budget` 的官方 HTML 正文页，输出与 `official_finance_fact_candidates.csv` 同列的候选表：

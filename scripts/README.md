@@ -40,10 +40,23 @@ python budget_uni/scripts/discover_download_official_pdfs.py
 脚本会：
 
 - 读取 `official_sources.csv` 中的官方索引页和年度页面。
-- 在同站点内查找标题或 URL 含预算、决算等关键词的页面。
+- 在同站点内查找标题或 URL 含预算、决算等关键词的页面；补数据时预算和决算要一起找，不要只扫预算页。
 - 进入年度页面查找 PDF，并下载到 `data/raw/official/pdfs/`。
 - 对新 PDF 追加 `source_level=official_pdf` 的来源行，`notes` 中记录本地文件名。
 - 写出 `data/interim/source_discovery/official_pdf_download_report.csv` 作为下载报告。
+
+查看 C9 学校 2013-2026 预算/决算官方来源缺口：
+
+```bash
+source /Users/adam/.venvs/dev/.venv/bin/activate
+python budget_uni/scripts/report_official_source_coverage.py
+```
+
+输出：
+
+- `data/processed/c9_official_source_coverage_2013_2026.csv`
+- `data/processed/c9_official_extraction_coverage_2013_2026.csv`
+- `data/processed/c9_official_source_coverage_2013_2026.md`
 
 新下载批次建议先跑一次批量抽取，再用抽出的 PDF 首页文本规范化年份和预算/决算口径，并移出明显非经费 PDF：
 
