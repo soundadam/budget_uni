@@ -49,7 +49,7 @@ def c9_palette() -> dict[str, tuple[float, float, float]]:
     return dict(zip(C9, sns.color_palette("tab10", n_colors=len(C9))))
 
 
-def savefig_with_watermark(path: Path, dpi: int = 220) -> None:
+def savefig_with_watermark(path: Path, dpi: int = 220, center_fontsize: int = 46, center_alpha: float = 0.12) -> None:
     fig = plt.gcf()
     fig.text(
         0.5,
@@ -57,9 +57,9 @@ def savefig_with_watermark(path: Path, dpi: int = 220) -> None:
         WATERMARK,
         ha="center",
         va="center",
-        fontsize=46,
+        fontsize=center_fontsize,
         color="#334155",
-        alpha=0.12,
+        alpha=center_alpha,
         rotation=28,
         weight="bold",
     )
@@ -368,20 +368,21 @@ def plot_combined(data: pd.DataFrame, growth: pd.DataFrame, path: Path) -> None:
             linewidth=0.8,
         )
     growth_ax.axhline(0, color="#475569", linewidth=1, linestyle="--")
+    growth_ax.set_yscale("symlog", linthresh=5, linscale=1)
     growth_ax.set_xlabel("年份")
-    growth_ax.set_ylabel("同比增速（%）")
+    growth_ax.set_ylabel("同比增速（%，symlog）")
     growth_ax.set_xticks(sorted(data["year"].unique()))
     growth_ax.text(
         0.01,
         0.03,
-        "圆点/折线：官方PDF/HTML优先；X 标记：旧第三方OCR回退",
+        "下图为 symlog 增速坐标；X 标记：旧第三方OCR回退",
         transform=growth_ax.transAxes,
         fontsize=9,
         color="#475569",
     )
 
     plt.tight_layout()
-    savefig_with_watermark(path)
+    savefig_with_watermark(path, center_fontsize=38, center_alpha=0.08)
     plt.close(fig)
 
 
