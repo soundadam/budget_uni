@@ -1,8 +1,8 @@
-# 中国高校预算与决算数据
+# Budget Uni CN：中国高校预算与决算数据
 
 [English version](README.en.md)
 
-`budget_uni` 正在整理中国高校年度财政预算、决算和相关经费数据。当前重点是爬取与核验 **教育部直属高校 2013-2026 年财政预算、决算等公开材料**，并把官网来源、第三方年度统计图、抽取脚本和已校验 CSV 放在一个便于复查和二次开发的仓库里。
+`budget_uni_cn`（Budget Uni CN）正在整理中国高校年度财政预算、决算和相关经费数据。当前重点是爬取与核验 **教育部直属高校 2013-2026 年财政预算、决算等公开材料**，并把官网来源、第三方年度统计图、抽取脚本和已校验 CSV 放在一个便于复查和二次开发的仓库里。
 
 ![C9 official-preferred budget trend and symlog growth](data/processed/figures/c9_budget_trend_growth_official_preferred.png)
 
@@ -40,14 +40,14 @@ data/processed/c9_budget_cagr_official_preferred.csv
 
 ## English Summary
 
-`budget_uni` is an open dataset and extraction workflow for Chinese university budget and final-account disclosures. The current work focuses on Ministry of Education affiliated universities from 2013 to 2026, using official university disclosure pages/PDFs and legacy third-party yearly summary charts.
+Budget Uni CN (`budget_uni_cn`) is an open dataset and extraction workflow for Chinese university budget and final-account disclosures. The current work focuses on Ministry of Education affiliated universities from 2013 to 2026, using official university disclosure pages/PDFs and legacy third-party yearly summary charts.
 
 Official-source extraction currently covers most C9 universities, while broader MOE-affiliated university coverage is still in progress. Reviewed CSVs and analysis figures are kept in Git; large raw official PDFs and the interim extraction cache are distributed through GitHub Releases.
 
 ## Repository Layout
 
 ```text
-budget_uni/
+budget_uni_cn/
   data/
     raw/
       images/                  # 第三方年度统计图，保留用于追溯 OCR
@@ -68,16 +68,16 @@ budget_uni/
 大文件不放入 Git 历史。目前 Release 包含：
 
 ```text
-budget_uni-raw-official-pdfs-2026-05-07.zip
-budget_uni-interim-cache-2026-05-07.zip
-budget_uni-release-manifest-2026-05-07.csv
+budget_uni_cn-raw-official-pdfs-2026-05-07.zip
+budget_uni_cn-interim-cache-2026-05-07.zip
+budget_uni_cn-release-manifest-2026-05-07.csv
 sha256sums-2026-05-07.txt
 ```
 
 Release 地址：
 
 ```text
-https://github.com/soundadam/budget_uni/releases/tag/raw-2026-05-07
+https://github.com/soundadam/budget_uni_cn/releases/tag/raw-2026-05-07
 ```
 
 ## 复现图表
@@ -175,7 +175,7 @@ CAGR 适合做长期趋势概览，但不能替代年度同比；年度同比更
 If you use this repository, cite it and preserve source fields in derived work:
 
 ```text
-Adam. China University Budget Dataset (budget_uni). 2026.
+Adam. Budget Uni CN: China University Budget Dataset (budget_uni_cn). 2026.
 ```
 
 Code is released under the MIT License. Data rows compiled by this project are intended for reuse with attribution; original source PDFs, pages, and third-party images remain subject to their original publishers' rights and terms.

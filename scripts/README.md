@@ -1,6 +1,6 @@
 # Scripts
 
-Run Python scripts from the `budget_uni` repo root with the shared dev environment active:
+Run Python scripts from the `budget_uni_cn` repo root with the shared dev environment active:
 
 ```zsh
 source /Users/adam/.venvs/dev/.venv/bin/activate
@@ -145,9 +145,9 @@ release-assets/2026-05-07/
 
 默认生成：
 
-- `budget_uni-raw-official-pdfs-2026-05-07.zip`
-- `budget_uni-interim-cache-2026-05-07.zip`
-- `budget_uni-release-manifest-2026-05-07.csv`
+- `budget_uni_cn-raw-official-pdfs-2026-05-07.zip`
+- `budget_uni_cn-interim-cache-2026-05-07.zip`
+- `budget_uni_cn-release-manifest-2026-05-07.csv`
 - `sha256sums-2026-05-07.txt`
 
 `release-assets/` 已被 `.gitignore` 忽略，生成后手动上传到 GitHub Releases。

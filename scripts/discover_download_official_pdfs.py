@@ -134,7 +134,7 @@ def fetch_url(url: str, *, binary: bool = False, timeout: int = 25) -> tuple[byt
     req = Request(
         request_url,
         headers={
-            "User-Agent": "Mozilla/5.0 budget_uni official source crawler",
+            "User-Agent": "Mozilla/5.0 budget_uni_cn official source crawler",
             "Accept": "*/*",
         },
     )
@@ -160,7 +160,7 @@ def quote_url_for_request(url: str) -> str:
 
 
 def fetch_url_with_curl(url: str, *, timeout: int = 25) -> tuple[bytes, str]:
-    with tempfile.TemporaryDirectory(prefix="budget_uni_curl_") as tmp_dir:
+    with tempfile.TemporaryDirectory(prefix="budget_uni_cn_curl_") as tmp_dir:
         cookie_jar = Path(tmp_dir) / "cookies.txt"
         content, final_url, status_code = curl_get(url, cookie_jar, timeout=timeout)
         if is_challenge_page(content):
@@ -180,7 +180,7 @@ def curl_get(url: str, cookie_jar: Path, *, timeout: int) -> tuple[bytes, str, s
             "--max-time",
             str(timeout),
             "-A",
-            "Mozilla/5.0 budget_uni official source crawler",
+            "Mozilla/5.0 budget_uni_cn official source crawler",
             "-b",
             str(cookie_jar),
             "-c",
@@ -212,7 +212,7 @@ def solve_dynamic_challenge(content: bytes, final_url: str, cookie_jar: Path, *,
         "challenge_id": challenge_match.group(1),
         "answer": int(answer_match.group(1)),
         "browser_info": {
-            "userAgent": "Mozilla/5.0 budget_uni official source crawler",
+            "userAgent": "Mozilla/5.0 budget_uni_cn official source crawler",
             "language": "zh-CN",
             "platform": "MacIntel",
             "cookieEnabled": True,
@@ -229,7 +229,7 @@ def solve_dynamic_challenge(content: bytes, final_url: str, cookie_jar: Path, *,
             "--max-time",
             str(timeout),
             "-A",
-            "Mozilla/5.0 budget_uni official source crawler",
+            "Mozilla/5.0 budget_uni_cn official source crawler",
             "-H",
             "Content-Type: application/json",
             "-b",

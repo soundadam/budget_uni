@@ -76,8 +76,8 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     packages = {
-        f"budget_uni-raw-official-pdfs-{args.date}.zip": [PROJECT_DIR / "data" / "raw" / "official" / "pdfs"],
-        f"budget_uni-interim-cache-{args.date}.zip": [PROJECT_DIR / "data" / "interim"],
+        f"budget_uni_cn-raw-official-pdfs-{args.date}.zip": [PROJECT_DIR / "data" / "raw" / "official" / "pdfs"],
+        f"budget_uni_cn-interim-cache-{args.date}.zip": [PROJECT_DIR / "data" / "interim"],
     }
 
     manifest_rows: list[dict[str, str | int]] = []
@@ -87,7 +87,7 @@ def main() -> None:
         manifest_rows.extend(write_package(package_path, roots))
         asset_rows.append((package_name, sha256(package_path), package_path.stat().st_size))
 
-    manifest_path = out_dir / f"budget_uni-release-manifest-{args.date}.csv"
+    manifest_path = out_dir / f"budget_uni_cn-release-manifest-{args.date}.csv"
     with manifest_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["package", "path", "bytes", "sha256"])
         writer.writeheader()

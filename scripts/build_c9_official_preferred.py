@@ -21,6 +21,7 @@ OLD_BUDGET = PROJECT_DIR / "data" / "processed" / "ministry_university_budget.cs
 OUT_DIR = PROJECT_DIR / "data" / "processed"
 FIG_DIR = OUT_DIR / "figures"
 WATERMARK = "@soundadam"
+GITHUB_URL = "github.com/soundadam/budget_uni_cn"
 
 C9 = [
     "北京大学",
@@ -93,10 +94,10 @@ def savefig_with_watermark(path: Path, dpi: int = 220, center_fontsize: int = 46
     fig.text(
         0.985,
         0.018,
-        WATERMARK,
+        GITHUB_URL,
         ha="right",
         va="bottom",
-        fontsize=10,
+        fontsize=9,
         color="#334155",
         alpha=0.5,
     )

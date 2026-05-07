@@ -1,6 +1,6 @@
-# China University Budget Dataset
+# Budget Uni CN: China University Budget Dataset
 
-`budget_uni` is an open dataset and extraction workflow for Chinese university budget and final-account disclosures. The current focus is collecting and verifying **2013-2026 budget, final-account, income, expenditure, and fiscal-appropriation disclosures for universities affiliated with China's Ministry of Education**.
+Budget Uni CN (`budget_uni_cn`) is an open dataset and extraction workflow for Chinese university budget and final-account disclosures. The current focus is collecting and verifying **2013-2026 budget, final-account, income, expenditure, and fiscal-appropriation disclosures for universities affiliated with China's Ministry of Education**.
 
 ![C9 official-preferred budget trend and symlog growth](data/processed/figures/c9_budget_trend_growth_official_preferred.png)
 
@@ -39,7 +39,7 @@ data/processed/c9_budget_cagr_official_preferred.csv
 ## Repository Layout
 
 ```text
-budget_uni/
+budget_uni_cn/
   data/
     raw/
       images/                  # legacy third-party yearly summary images
@@ -60,15 +60,15 @@ budget_uni/
 Large raw and cache files are not stored in Git history. They are distributed through GitHub Releases:
 
 ```text
-https://github.com/soundadam/budget_uni/releases/tag/raw-2026-05-07
+https://github.com/soundadam/budget_uni_cn/releases/tag/raw-2026-05-07
 ```
 
 Current release assets:
 
 ```text
-budget_uni-raw-official-pdfs-2026-05-07.zip
-budget_uni-interim-cache-2026-05-07.zip
-budget_uni-release-manifest-2026-05-07.csv
+budget_uni_cn-raw-official-pdfs-2026-05-07.zip
+budget_uni_cn-interim-cache-2026-05-07.zip
+budget_uni_cn-release-manifest-2026-05-07.csv
 sha256sums-2026-05-07.txt
 ```
 
@@ -169,7 +169,7 @@ More script notes are in `scripts/README.md`.
 If you use this repository, cite it and preserve source fields in derived work:
 
 ```text
-Adam. China University Budget Dataset (budget_uni). 2026.
+Adam. Budget Uni CN: China University Budget Dataset (budget_uni_cn). 2026.
 ```
 
 Code is released under the MIT License. Data rows compiled by this project are intended for reuse with attribution; original source PDFs, pages, and third-party images remain subject to their original publishers' rights and terms.
